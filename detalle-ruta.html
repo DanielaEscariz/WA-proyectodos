@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ruta Navacerrada</title>
+
+        <!-- Tipografía Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+
+    <body>
+        
+    </body>
+</html>
+
+
+
+
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="contenedor-cabecera">
+
+            <a href="index.html" class="logo">
+                <img src="media/img/index/riderroute-nombreblanco.webp" alt="RiderRoute">
+            </a>
+
+            <button class="boton-menu" id="boton-menu" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navegacion" id="navegacion">
+                <ul class="lista-navegacion">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="rutas.html" class="activo">Rutas</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="agenda.html">Mi agenda</a></li>
+                </ul>
+            </nav>
+
+            <div class="acciones-cabecera">
+                <a href="perfil.html" class="enlace-perfil">Perfil</a>
+                <a href="#" class="boton-principal">Crear ruta</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="pagina-detalle-ruta">
+
+        <!-- VOLVER A RUTAS -->
+        <div class="volver-pagina">
+            <a href="rutas.html">← Volver a rutas</a>
+        </div>
+
+        <!-- IMAGEN PRINCIPAL -->
+        <section class="cabecera-detalle-ruta">
+            <div class="imagen-detalle-ruta">
+                <img src="#" alt="foto de Navacerrada">
+            </div>
+
+            <div class="titulo-detalle-ruta">
+                <div class="informacion-titulo-ruta">
+                    <h1>Ruta Puerto de Navacerrada</h1>
+
+                    <p class="subtitulo-ruta">
+                        Navacerrada · Madrid
+                    </p>
+                </div>
+
+                <div class="estadisticas-ruta">
+                    <div class="dato-ruta">
+                        <span>Distancia</span>
+                        <strong>128 km</strong>
+                    </div>
+
+                    <div class="dato-ruta">
+                        <span>Duración</span>
+                        <strong>2 h 45 min</strong>
+                    </div>
+
+                    <div class="dato-ruta">
+                        <span>Dificultad</span>
+                        <strong>Media</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INFORMACIÓN DE LA RUTA -->
+        <div class="contenido-detalle-ruta">
+
+            <!-- COLUMNA PRINCIPAL -->
+            <div class="informacion-principal-ruta">
+
+                <!-- DESCRIPCIÓN -->
+                <section class="sobre-ruta">
+                    <h2>Sobre la ruta</h2>
+
+                    <p>
+                        Una ruta circular para disfrutar de los puertos y paisajes
+                        del Puerto de Navacerrada. Un recorrido pensado para
+                        motoristas que buscan buenas curvas, paisajes de montaña
+                        y una experiencia compartida sobre dos ruedas.
+                    </p>
+                </section>
+
+
+                <!-- RECORRIDO -->
+                <section class="recorrido-ruta">
+                    <h2>Recorrido</h2>
+
+                    <div class="informacion-recorrido">
+                        <span>Mapa del recorrido</span>
+
+                        <p>
+                            Navacerrada → Rascafría → Miraflores → Navacerrada
+                        </p>
+
+                        <div class="mapa-ruta">
+                            <img src="#" alt="Recorrido Mapa">
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- DETALLES -->
+                <section class="detalles-ruta">
+                    <h2>Detalles</h2>
+
+                    <div class="detalle-desplegable">
+                        <h3>Punto de encuentro</h3>
+
+                        <p>
+                            Parking del Puerto de Navacerrada.
+                        </p>
+                    </div>
+
+                    <div class="detalle-desplegable">
+                        <h3>Tipo de vía</h3>
+
+                        <p>
+                            Carreteras secundarias y puertos de montaña.
+                        </p>
+                    </div>
+
+                    <div class="detalle-desplegable">
+                        <h3>Recomendaciones</h3>
+
+                        <p>
+                            Depósito lleno y equipamiento completo.
+                        </p>
+                    </div>
+                </section>
+
+
+                <!-- ORGANIZADOR -->
+                <section class="organizador-ruta">
+                    <h2>Organizado por:</h2>
+
+                    <div class="datos-organizador">
+                        <span class="icono-organizador">◉</span>
+                        <p>Escariz Rider</p>
+                    </div>
+                </section>
+            </div>
+
+
+            <!-- COLUMNA LATERAL -->
+            <aside class="reserva-ruta">
+                <div class="precio-ruta">
+                    <div>
+                        <h2>Gratuita</h2>
+                        <p>Grupo de 12 plazas</p>
+                    </div>
+
+                    <span class="plazas-disponibles">4 plazas disponibles</span>
+                </div>
+
+                <a href="#" class="boton-unirse-ruta">
+                    Unirme a la ruta
+                </a>
+
+                <button type="button" class="boton-guardar-ruta">
+                    Guardar ruta
+                </button>
+
+                <p class="nota-reserva">
+                    Consulta todos los detalles y organiza tu próxima salida
+                    con la comunidad RiderRoute.
+                </p>
+            </aside>
+        </div>
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <div class="contenido-footer">
+
+            <a href="index.html" class="logo-footer">
+                <img src="media/img/index/riderroute-nombreblanco.webp" alt="RiderRoute">
+            </a>
+
+            <nav class="navegacion-footer">
+                <a href="index.html">Inicio</a>
+                <a href="rutas.html">Rutas</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="agenda.html">Mi agenda</a>
+                <a href="#">Comunidad</a>
+            </nav>
+
+            <p class="copyright">
+                © 2026 RiderRoute · Privacidad · Términos
+            </p>
+        </div>
+    </footer>
+
