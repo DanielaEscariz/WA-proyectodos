@@ -15,8 +15,6 @@
 }
 
 
-
-/* CONFIGURACIÓN DE LA PÁGINA */
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--negro);
@@ -48,8 +46,7 @@ button {
 
 
 
-/* _______________ CABECERA _____________________ */
-
+/* _______________ CABECERA Y NAV _____________________ */
 
 /* CABECERA */
     .cabecera {
@@ -65,7 +62,6 @@ button {
         min-height: 90px;
         margin: 0 auto;
         padding: 0 60px;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -84,7 +80,6 @@ button {
         display: flex;
         align-items: center;
         gap: 36px;
-
         list-style: none;
     }
 
@@ -93,7 +88,6 @@ button {
         color: var(--gris);
         font-size: 14px;
         font-weight: 500;
-
         transition: color 0.2s ease;
     }
 
@@ -120,7 +114,6 @@ button {
         color: var(--blanco);
         font-size: 14px;
         font-weight: 500;
-
         transition: color 0.2s ease;
     }
 
@@ -134,13 +127,10 @@ button {
     .acciones-cabecera .boton-crear {
         display: inline-block;
         padding: 13px 22px;
-
         background-color: var(--rojo);
         color: var(--blanco);
-
         font-size: 13px;
         font-weight: 600;
-
         transition: background-color 0.2s ease;
     }
 
@@ -154,3 +144,80 @@ button {
     .boton-menu {
         display: none;
     }
+
+
+
+
+
+
+/* _______________ BOTONES _____________________ */
+
+/* BOTONES PRIMARIOS */
+    .boton-principal,
+    .boton-crear,
+    .boton-ver-ruta,
+    .boton-ver-evento,
+    .boton-unirse-ruta,
+    .boton-unirse-evento,
+    .boton-confirmar-modal,
+    .boton-error {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 22px;
+        background-color: var(--rojo);
+        color: var(--blanco);
+        border: 1px solid var(--rojo);
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+/* HOVER BOTONES PRIMARIOS */
+    .boton-principal:hover,
+    .boton-crear:hover,
+    .boton-ver-ruta:hover,
+    .boton-ver-evento:hover,
+    .boton-unirse-ruta:hover,
+    .boton-unirse-evento:hover,
+    .boton-confirmar-modal:hover,
+    .boton-error:hover {
+        background-color: var(--rojo-oscuro);
+        border-color: var(--rojo-oscuro);
+    }
+
+/* BOTONES SECUNDARIOS */
+    .boton-secundario,
+    .boton-guardar-ruta,
+    .boton-guardar-evento,
+    .boton-cancelar-modal,
+    .enlace-error {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 22px;
+        background-color: transparent;
+        color: var(--blanco);
+        border: 1px solid #555555;
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+/* HOVER BOTONES SECUNDARIOS */
+    .boton-secundario:hover,
+    .boton-guardar-ruta:hover,
+    .boton-guardar-evento:hover,
+    .boton-cancelar-modal:hover,
+    .enlace-error:hover {
+        border-color: var(--rojo);
+        color: var(--rojo);
+    }
+
+
