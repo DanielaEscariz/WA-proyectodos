@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --negro: #000000;
+    --carbon: #0F0F0F;
+    --rojo: #FF0000;
+    --rojo-oscuro: #790101;
+    --blanco: #F5F5F5;
+    --gris: #949494;
+}
+
+
+
+/* CONFIGURACIÓN DE LA PÁGINA */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--negro);
+    color: var(--blanco);
+    font-size: 16px;
+}
+
+
+/* IMÁGENES */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ENLACES */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* BOTONES */
+button {
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+}
+
+
+
+
+/* _______________ CABECERA _____________________ */
+
+
+/* CABECERA */
+    .cabecera {
+        width: 100%;
+        background-color: var(--negro);
+        border-bottom: 1px solid #222222;
+    }
+
+
+    /* CONTENEDOR DE CABECERA */
+    .contenedor-cabecera {
+        max-width: 1440px;
+        min-height: 90px;
+        margin: 0 auto;
+        padding: 0 60px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+
+    /* LOGO */
+    .logo img {
+        width: 190px;
+        height: auto;
+    }
+
+
+/* NAVEGACIÓN */
+    .lista-navegacion {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        list-style: none;
+    }
+
+
+    .lista-navegacion a {
+        color: var(--gris);
+        font-size: 14px;
+        font-weight: 500;
+
+        transition: color 0.2s ease;
+    }
+
+    .lista-navegacion a:hover {
+        color: var(--blanco);
+    }
+
+
+    /* ENLACE ACTIVO */
+    .lista-navegacion a.activo {
+        color: var(--rojo);
+    }
+
+
+    /* ACCIONES DE CABECERA */
+    .acciones-cabecera {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
+
+    .enlace-perfil {
+        color: var(--blanco);
+        font-size: 14px;
+        font-weight: 500;
+
+        transition: color 0.2s ease;
+    }
+
+
+    .enlace-perfil:hover {
+        color: var(--rojo);
+    }
+
+
+    /* BOTÓN CREAR RUTA */
+    .acciones-cabecera .boton-crear {
+        display: inline-block;
+        padding: 13px 22px;
+
+        background-color: var(--rojo);
+        color: var(--blanco);
+
+        font-size: 13px;
+        font-weight: 600;
+
+        transition: background-color 0.2s ease;
+    }
+
+
+    .acciones-cabecera .boton-crear:hover {
+        background-color: var(--rojo-oscuro);
+    }
+
+
+    /* BOTÓN MENÚ MÓVIL */
+    .boton-menu {
+        display: none;
+    }
