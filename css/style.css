@@ -12,6 +12,7 @@
     --rojo-oscuro: #790101;
     --blanco: #F5F5F5;
     --gris: #949494;
+    --grisoscuro: #292929;
 }
 
 
@@ -297,4 +298,132 @@ button {
     .contenido-hero .boton-principal,
     .contenido-hero .boton-secundario {
         margin-right: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+/* _______________ RUTAS _____________________ */
+
+/* CONTENEDOR PRINCIPAL */
+    .pagina-rutas {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 80px 60px;
+    }
+
+/* INTRODUCCIÓN */
+    .introduccion-rutas {
+        margin-bottom: 48px;
+    }
+
+    .introduccion-rutas h1 {
+        margin-bottom: 16px;
+        color: var(--blanco);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .introduccion-rutas p {
+        max-width: 600px;
+        color: var(--gris);
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+/* BUSCADOR */
+    .buscador-rutas {
+        margin-bottom: 48px;
+        padding: 24px;
+        background-color: var(--carbon);
+        border: 1px solid #292929;
+        border-radius: 16px;
+    }
+
+    /* FORMULARIO DE BÚSQUEDA */
+    .formulario-busqueda {
+        display: flex;
+        align-items: flex-end;
+        gap: 16px;
+    }
+
+    /* CAMPOS */
+    .campo-busqueda {
+        flex: 1;
+        min-width: 0;
+    }
+
+    /* ETIQUETAS */
+    .formulario-busqueda label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    /* INPUTS Y SELECTORES */
+    .formulario-busqueda input,
+    .formulario-busqueda select {
+        width: 100%;
+        min-width: 0;
+        min-height: 48px;
+        padding: 0 16px;
+        background-color: #181818;
+        color: var(--blanco);
+        border: 1px solid #444444;
+        border-radius: 10px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+    }
+
+    /* CONTENEDOR DEL SELECTOR */
+    .contenedor-select {
+        position: relative;
+        width: 100%;
+    }
+
+    /* SELECTOR */
+    .contenedor-select select {
+        appearance: none;
+        padding-right: 40px;
+        cursor: pointer;
+    }
+
+    /* FLECHA PERSONALIZADA */
+    .flecha-select {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        color: var(--blanco);
+        font-size: 18px;
+        pointer-events: none;
+    }
+
+    /* BOTÓN DE BÚSQUEDA */
+    .formulario-busqueda button {
+        min-height: 48px;
+        padding: 0 28px;
+        background-color: var(--rojo);
+        color: var(--blanco);
+        border: 1px solid var(--rojo);
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+    /* HOVER DEL BOTÓN */
+    .formulario-busqueda button:hover {
+        background-color: var(--rojo-oscuro);
+        border-color: var(--rojo-oscuro);
     }
