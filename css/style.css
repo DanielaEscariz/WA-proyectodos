@@ -13,6 +13,8 @@
     --blanco: #F5F5F5;
     --gris: #949494;
     --grisoscuro: #292929;
+    --verde: #6fd75a;
+;
 }
 
 
@@ -340,92 +342,7 @@ button {
         line-height: 1.6;
     }
 
-/* BUSCADOR */
-    .buscador-rutas {
-        margin-bottom: 48px;
-        padding: 24px;
-        background-color: var(--carbon);
-        border: 1px solid #292929;
-        border-radius: 16px;
-    }
 
-    /* FORMULARIO DE BÚSQUEDA */
-    .formulario-busqueda {
-        display: flex;
-        align-items: flex-end;
-        gap: 16px;
-    }
-
-    /* CAMPOS */
-    .campo-busqueda {
-        flex: 1;
-        min-width: 0;
-    }
-
-    /* ETIQUETAS */
-    .formulario-busqueda label {
-        display: block;
-        margin-bottom: 8px;
-    }
-
-    /* INPUTS Y SELECTORES */
-    .formulario-busqueda input,
-    .formulario-busqueda select {
-        width: 100%;
-        min-width: 0;
-        min-height: 48px;
-        padding: 0 16px;
-        background-color: #181818;
-        color: var(--blanco);
-        border: 1px solid #444444;
-        border-radius: 10px;
-        font-family: 'Inter', sans-serif;
-        font-size: 14px;
-    }
-    
-    /* SELECTOR */
-    .contenedor-select select {
-        appearance: none;
-        cursor: pointer;
-    }
-
-    /* FLECHA PERSONALIZADA */
-    .flecha-select {
-        position: absolute;
-        top: 50%;
-        right: 16px;
-        transform: translateY(-50%);
-        color: var(--blanco);
-        font-size: 18px;
-        pointer-events: none;
-    }
-
-    /* FLECHA AGENDITA */
-    .formulario-busqueda input[type="date"] {
-    color-scheme: dark;
-    cursor: pointer;
-    }
-
-    /* BOTÓN DE BÚSQUEDA */
-    .formulario-busqueda button {
-        min-height: 48px;
-        padding: 0 28px;
-        background-color: var(--rojo);
-        color: var(--blanco);
-        border: 1px solid var(--rojo);
-        border-radius: 50px;
-        font-family: 'Inter', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        white-space: nowrap;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
-    }
-
-    /* HOVER DEL BOTÓN */
-    .formulario-busqueda button:hover {
-        background-color: var(--rojo-oscuro);
-        border-color: var(--rojo-oscuro);
-    }
 
 /* FILTROS RÁPIDOS */
 
@@ -638,6 +555,319 @@ button {
 
 
 
+
+
+
+
+/* _______________ EVENTOS _____________________ */
+
+/* INTRODUCCIÓN */
+    .pagina-eventos {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 70px 60px 100px;
+    }
+
+    .introduccion-eventos {
+        margin-bottom: 45px;
+    }
+
+    .introduccion-eventos h1 {
+        margin-bottom: 16px;
+        color: var(--blanco);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+
+    .introduccion-eventos p {
+        color: var(--gris);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+
+/* RESULTADOS DE EVENTOS */
+
+.resultados-eventos {
+    width: 100%;
+}
+
+.resultados-eventos .cabecera-resultados {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.resultados-eventos .cabecera-resultados h3 {
+    color: var(--blanco);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* REJILLA DE EVENTOS */
+
+.rejilla-eventos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* TARJETA DE EVENTO */
+
+.tarjeta-evento {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #0E0E0E;
+    border: 1px solid #222;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
+}
+
+.tarjeta-evento:hover {
+    border-color: #555;
+}
+
+/* IMAGEN Y FECHA */
+
+.foto-evento {
+    position: relative;
+    width: 100%;
+    height: 205px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.fecha-evento {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    color: var(--blanco);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* CONTENIDO DEL EVENTO */
+
+.contenido-evento {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 22px 18px 18px;
+}
+
+.contenido-evento h2 {
+    margin-bottom: 8px;
+    color: var(--blanco);
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.ubicacion-evento {
+    margin-bottom: 26px;
+    color: var(--gris);
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* INFORMACIÓN DEL EVENTO */
+
+.informacion-evento {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+.organizador-evento span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gris);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.organizador-evento p {
+    color: var(--blanco);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nombre-organizador {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--blanco);
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.nombre-organizador i {
+    color: var(--gris);
+    font-size: 13px;
+}
+
+.plazas-evento {
+    color: var(--verde);
+    font-size: 11px;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* PIE DE LA TARJETA */
+
+.pie-tarjeta-evento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* ICONO GUARDAR EVENTO */
+
+.pie-tarjeta-evento .guardar-evento {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--gris);
+    border: 1px solid #333;
+    border-radius: 50%;
+    font-size: 16px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.pie-tarjeta-evento .guardar-evento:hover {
+    color: var(--rojo);
+    border-color: var(--rojo);
+}
+
+
+
+/* _______________ UNIFICACIÓN DE CSS BUSCADORES DE RUTAS Y EVENTOS _____________________ */
+
+/* CONTENEDORES */
+.buscador-rutas,
+.buscador-eventos {
+    width: 100%;
+    margin-bottom: 48px;
+    padding: 24px;
+    background-color: var(--carbon);
+    border: 1px solid var(--grisoscuro);
+    border-radius: 16px;
+}
+
+/* FORMULARIOS */
+.formulario-busqueda,
+.formulario-eventos {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+/* CAMPOS */
+.formulario-busqueda .campo-busqueda,
+.formulario-eventos .campo-busqueda {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ETIQUETAS */
+.formulario-busqueda label,
+.formulario-eventos label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--gris);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* INPUTS Y SELECTORES */
+.formulario-busqueda input,
+.formulario-busqueda select,
+.formulario-eventos input,
+.formulario-eventos select {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    padding: 0 16px;
+    background-color: #181818;
+    color: var(--blanco);
+    border: 1px solid #444;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+}
+
+/* FECHA */
+.formulario-busqueda input[type="date"],
+.formulario-eventos input[type="date"] {
+    color-scheme: dark;
+    cursor: pointer;
+}
+
+/* SELECTORES */
+.contenedor-select {
+    position: relative;
+    width: 100%;
+}
+
+.contenedor-select select {
+    appearance: none;
+    cursor: pointer;
+}
+
+/* FLECHA PERSONALIZADA */
+.flecha-select {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    color: var(--blanco);
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* BOTONES DE BÚSQUEDA */
+.formulario-busqueda button,
+.formulario-eventos button {
+    min-height: 48px;
+    padding: 0 28px;
+    background-color: var(--rojo);
+    color: var(--blanco);
+    border: 1px solid var(--rojo);
+    border-radius: 50px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* HOVER */
+.formulario-busqueda button:hover,
+.formulario-eventos button:hover {
+    background-color: var(--rojo-oscuro);
+    border-color: var(--rojo-oscuro);
+}
 
 
 
