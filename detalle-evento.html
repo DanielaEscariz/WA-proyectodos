@@ -36,13 +36,13 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="rutas.html">Rutas</a></li>
                         <li><a href="eventos.html" class="activo">Eventos</a></li>
-                        <li><a href="agenda.html">Mi agenda</a></li>
+                        <li><a href="404.html">Mi agenda</a></li>
                     </ul>
                 </nav>
 
                 <div class="acciones-cabecera">
-                    <a href="perfil.html" class="enlace-perfil">Perfil</a>
-                    <a href="#" class="boton-principal">Crear ruta</a>
+                    <a href="404.html" class="enlace-perfil">Perfil</a>
+                    <a href="404.html" class="boton-crear">Crear ruta</a>
                 </div>
             </div>
         </header>
@@ -210,9 +210,9 @@
                         </span>
                     </div>
 
-                    <a href="#" class="boton-unirse-evento">
+                    <button type="button" class="boton-unirse-evento" id="abrir-modal-evento">
                         Reservar plaza
-                    </a>
+                    </button>
 
                     <button type="button" class="boton-guardar-evento">
                         Guardar evento
@@ -223,6 +223,43 @@
                         sobre dos ruedas con la comunidad RiderRoute.
                     </p>
                 </aside>
+            </div>
+
+            <!-- VENTANA MODAL -->
+            <div class="modal-aviso" id="modal-evento">
+                <div class="contenido-modal">
+                    <button type="button" class="cerrar-modal" id="cerrar-modal-evento" aria-label="Cerrar">
+                        ×
+                    </button>
+
+                    <div class="icono-modal">
+                        ✓
+                    </div>
+
+                    <span class="etiqueta-modal">CONFIRMACIÓN DE EVENTO</span>
+
+                    <h2>¿Reservamos tu plaza?</h2>
+
+                    <p class="texto-modal">
+                        Estás a punto de reservar tu plaza para la Rodada Sierra de Madrid.
+                        ¡Prepara tu moto y nos vemos en la carretera!
+                    </p>
+
+                    <div class="resumen-modal">
+                        <p><strong>Fecha:</strong> 18 de octubre</p>
+                        <p><strong>Hora:</strong> 10:00 h</p>
+                        <p><strong>Participantes:</strong> 18 de 25</p>
+                        <p><strong>Precio:</strong> Gratuito</p>
+                    </div>
+
+                    <button type="button" class="boton-confirmar-modal" id="confirmar-evento">
+                        Confirmar reserva
+                    </button>
+
+                    <button type="button" class="boton-cancelar-modal" id="cancelar-modal-evento">
+                        Ahora no
+                    </button>
+                </div>
             </div>
         </main>
 
@@ -239,8 +276,8 @@
                     <a href="index.html">Inicio</a>
                     <a href="rutas.html">Rutas</a>
                     <a href="eventos.html">Eventos</a>
-                    <a href="agenda.html">Mi agenda</a>
-                    <a href="#">Comunidad</a>
+                    <a href="404.html">Mi agenda</a>
+                    <a href="404.html">Comunidad</a>
                 </nav>
 
                 <p class="copyright">

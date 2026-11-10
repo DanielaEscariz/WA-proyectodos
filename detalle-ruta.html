@@ -44,13 +44,13 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="rutas.html" class="activo">Rutas</a></li>
                     <li><a href="eventos.html">Eventos</a></li>
-                    <li><a href="agenda.html">Mi agenda</a></li>
+                    <li><a href="404.html">Mi agenda</a></li>
                 </ul>
             </nav>
 
             <div class="acciones-cabecera">
-                <a href="perfil.html" class="enlace-perfil">Perfil</a>
-                <a href="#" class="boton-principal">Crear ruta</a>
+                <a href="404.html" class="enlace-perfil">Perfil</a>
+                <a href="404.html" class="boton-crear">Crear ruta</a>
             </div>
         </div>
     </header>
@@ -186,12 +186,14 @@
                         <p>Grupo de 12 plazas</p>
                     </div>
 
-                    <span class="plazas-disponibles">4 plazas disponibles</span>
+                    <span class="plazas-disponibles">
+                        4 plazas disponibles
+                    </span>
                 </div>
 
-                <a href="#" class="boton-unirse-ruta">
+                <button type="button" class="boton-unirse-ruta" id="abrir-modal-ruta">
                     Unirme a la ruta
-                </a>
+                </button>
 
                 <button type="button" class="boton-guardar-ruta">
                     Guardar ruta
@@ -203,6 +205,43 @@
                 </p>
             </aside>
         </div>
+
+        <!-- VENTANA MODAL -->
+        <div class="modal-aviso" id="modal-ruta">
+            <div class="contenido-modal">
+                <button type="button" class="cerrar-modal" id="cerrar-modal-ruta" aria-label="Cerrar">
+                    ×
+                </button>
+
+                <div class="icono-modal">
+                    ✓
+                </div>
+
+                <span class="etiqueta-modal">CONFIRMACIÓN DE RUTA</span>
+
+                <h2>¿Te unes a la ruta?</h2>
+
+                <p class="texto-modal">
+                    Estás a punto de unirte a la ruta Puerto de Navacerrada.
+                    ¡Prepara tu moto y disfruta del recorrido!
+                </p>
+
+                <div class="resumen-modal">
+                    <p><strong>Fecha:</strong> 17 de noviembre</p>
+                    <p><strong>Duración:</strong> 2 h 45 min</p>
+                    <p><strong>Precio:</strong> Gratuito</p>
+                </div>
+
+                <button type="button" class="boton-confirmar-modal" id="confirmar-ruta">
+                    Confirmar inscripción
+                </button>
+
+                <button type="button" class="boton-cancelar-modal" id="cancelar-modal-ruta">
+                    Ahora no
+                </button>
+            </div>
+        </div>
+
     </main>
 
 
@@ -218,8 +257,8 @@
                 <a href="index.html">Inicio</a>
                 <a href="rutas.html">Rutas</a>
                 <a href="eventos.html">Eventos</a>
-                <a href="agenda.html">Mi agenda</a>
-                <a href="#">Comunidad</a>
+                <a href="404.html">Mi agenda</a>
+                <a href="404.html">Comunidad</a>
             </nav>
 
             <p class="copyright">
