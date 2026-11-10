@@ -46,6 +46,82 @@ button {
 
 
 
+
+/* _______________ BOTONES _____________________ */
+
+/* BOTONES PRIMARIOS */
+    .boton-principal,
+    .boton-crear,
+    .boton-ver-ruta,
+    .boton-ver-evento,
+    .boton-unirse-ruta,
+    .boton-unirse-evento,
+    .boton-confirmar-modal,
+    .boton-error {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 22px;
+        background-color: var(--rojo);
+        color: var(--blanco);
+        border: 1px solid var(--rojo);
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s ease, border-color 0.2s ease;
+    }
+
+/* HOVER BOTONES PRIMARIOS */
+    .boton-principal:hover,
+    .boton-crear:hover,
+    .boton-ver-ruta:hover,
+    .boton-ver-evento:hover,
+    .boton-unirse-ruta:hover,
+    .boton-unirse-evento:hover,
+    .boton-confirmar-modal:hover,
+    .boton-error:hover {
+        background-color: var(--rojo-oscuro);
+        border-color: var(--rojo-oscuro);
+    }
+
+/* BOTONES SECUNDARIOS */
+    .boton-secundario,
+    .boton-guardar-ruta,
+    .boton-guardar-evento,
+    .boton-cancelar-modal,
+    .enlace-error {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 22px;
+        background-color: transparent;
+        color: var(--blanco);
+        border: 1px solid #555555;
+        border-radius: 50px;
+        font-family: 'Inter', sans-serif;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: border-color 0.2s ease, color 0.2s ease;
+    }
+
+/* HOVER BOTONES SECUNDARIOS */
+    .boton-secundario:hover,
+    .boton-guardar-ruta:hover,
+    .boton-guardar-evento:hover,
+    .boton-cancelar-modal:hover,
+    .enlace-error:hover {
+        border-color: var(--rojo);
+        color: var(--rojo);
+    }
+
+
+
+
+
+
 /* _______________ CABECERA Y NAV _____________________ */
 
 /* CABECERA */
@@ -150,74 +226,75 @@ button {
 
 
 
-/* _______________ BOTONES _____________________ */
 
-/* BOTONES PRIMARIOS */
-    .boton-principal,
-    .boton-crear,
-    .boton-ver-ruta,
-    .boton-ver-evento,
-    .boton-unirse-ruta,
-    .boton-unirse-evento,
-    .boton-confirmar-modal,
-    .boton-error {
-        display: inline-flex;
-        justify-content: center;
+
+/* _______________ INICIO _____________________ */
+
+/* HERO PRINCIPAL */
+.hero {
+        position: relative;
+        width: 100%;
+        min-height: 680px;
+        display: flex;
         align-items: center;
-        padding: 14px 22px;
-        background-color: var(--rojo);
+        overflow: hidden;
+    }
+
+    /* IMAGEN DEL HERO */
+    .imagen-hero {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* CAPA OSCURA */
+    .capa-oscura {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.55);
+    }
+
+/* CONTENIDO DEL HERO */
+    .contenido-hero {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 100px 60px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* TITULAR */
+    .contenido-hero h1 {
+        max-width: 750px;
+        margin-bottom: 24px;
         color: var(--blanco);
-        border: 1px solid var(--rojo);
-        border-radius: 50px;
-        font-family: 'Inter', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background-color 0.2s ease, border-color 0.2s ease;
+        font-size: 64px;
+        font-weight: 700;
+        line-height: 1.05;
     }
 
-/* HOVER BOTONES PRIMARIOS */
-    .boton-principal:hover,
-    .boton-crear:hover,
-    .boton-ver-ruta:hover,
-    .boton-ver-evento:hover,
-    .boton-unirse-ruta:hover,
-    .boton-unirse-evento:hover,
-    .boton-confirmar-modal:hover,
-    .boton-error:hover {
-        background-color: var(--rojo-oscuro);
-        border-color: var(--rojo-oscuro);
-    }
-
-/* BOTONES SECUNDARIOS */
-    .boton-secundario,
-    .boton-guardar-ruta,
-    .boton-guardar-evento,
-    .boton-cancelar-modal,
-    .enlace-error {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        padding: 14px 22px;
-        background-color: transparent;
+    /* TEXTO */
+    .contenido-hero p {
+        max-width: 550px;
+        margin-bottom: 32px;
         color: var(--blanco);
-        border: 1px solid #555555;
-        border-radius: 50px;
-        font-family: 'Inter', sans-serif;
-        font-size: 13px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: border-color 0.2s ease, color 0.2s ease;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 1.6;
     }
 
-/* HOVER BOTONES SECUNDARIOS */
-    .boton-secundario:hover,
-    .boton-guardar-ruta:hover,
-    .boton-guardar-evento:hover,
-    .boton-cancelar-modal:hover,
-    .enlace-error:hover {
-        border-color: var(--rojo);
-        color: var(--rojo);
+    /* BOTONES */
+    .contenido-hero .boton-principal,
+    .contenido-hero .boton-secundario {
+        margin-right: 12px;
     }
-
-
