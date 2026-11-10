@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">        
     </head>
@@ -85,16 +88,7 @@
                     <!-- FECHA -->
                     <div class="campo-busqueda">
                         <label for="fecha">CUÁNDO</label>
-
-                        <div class="contenedor-select">
-                            <select id="fecha" name="fecha">
-                                <option value="">Cualquier fecha</option>
-                                <option value="hoy">Hoy</option>
-                                <option value="fin-semana">Este fin de semana</option>
-                            </select>
-
-                            <span class="flecha-select">⌄</span>
-                        </div>
+                        <input type="date" id="fecha" name="fecha">
                     </div>
 
                     <!-- RITMO -->
@@ -102,7 +96,7 @@
                         <label for="ritmo">RITMO</label>
 
                         <div class="contenedor-select">
-                            <select id="ritmo" name="fecha">
+                            <select id="ritmo" name="ritmo">
                                 <option value="">Todos los niveles</option>
                                 <option value="tranquilo">Tranquilo</option>
                                 <option value="medio">Medio</option>
@@ -169,7 +163,7 @@
             <section class="resultados-rutas">
 
                 <div class="cabecera-resultados">
-                    <h2>24 RUTAS ENCONTRADAS</h2>
+                    <h3>24 RUTAS ENCONTRADAS</h3>
                 </div>
 
 
@@ -178,10 +172,14 @@
 
                     <!-- RUTA 1 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-guadarrama">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta1.webp" alt="Carretera de montaña en Puerto de Navacerrada">
                             <span class="fecha-ruta">17 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
                             <h3>Puerto Navacerrada</h3>
 
@@ -189,6 +187,7 @@
                                 Madrid → Puerto de Navacerrada
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -206,27 +205,39 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
 
 
+
                     <!-- RUTA 2 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-morcuera">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta2.webp" alt="Ruta 2">
                             <span class="fecha-ruta">18 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
                             <h3>La Morcuera</h3>
 
                             <p class="trayecto-ruta">
-                                Madrid - La Morcuera
+                                Madrid → La Morcuera
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -244,9 +255,15 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
@@ -254,17 +271,22 @@
 
                     <!-- RUTA 3 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-cruz-verde">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta3.webp" alt="Ruta 3">
                             <span class="fecha-ruta">22 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
-                            <h3>Cruz Verde</h3>
+                            <h3>Cruz verde</h3>
 
                             <p class="trayecto-ruta">
-                                Segovia - Cruz Verde
+                                Segovia → Cruz Verde
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -282,9 +304,15 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
