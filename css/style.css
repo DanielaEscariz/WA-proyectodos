@@ -1531,3 +1531,425 @@ button {
 
     
 
+
+
+
+
+/* _______________ MEDIA QUERIES _____________________ */
+
+
+
+/* _______________ RESPONSIVE · TABLET _____________________ */
+
+@media screen and (max-width: 1024px) {
+
+    /* CABECERA */
+    .contenedor-cabecera {
+        padding: 0 30px;
+    }
+
+    .logo img {
+        width: 160px;
+    }
+
+    .lista-navegacion {
+        gap: 20px;
+    }
+
+    .acciones-cabecera {
+        gap: 16px;
+    }
+
+
+    /* MENÚ HAMBURGUESA */
+    .boton-menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 6px;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .boton-menu span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background-color: var(--rojo);
+        border-radius: 2px;
+    }
+
+    /* OCULTAR NAVEGACIÓN Y ACCIONES */
+    .navegacion {
+        display: none;
+    }
+
+    .acciones-cabecera {
+        display: none;
+    }
+
+
+    /* INICIO */
+    .contenido-hero {
+        padding: 80px 40px;
+    }
+
+    .contenido-hero h1 {
+        font-size: 52px;
+    }
+
+    /* PÁGINAS DE RUTAS Y EVENTOS */
+    .pagina-rutas,
+    .pagina-eventos {
+        padding: 60px 30px 80px;
+    }
+
+    .rejilla-rutas,
+    .rejilla-eventos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    /* BUSCADORES */
+    .formulario-busqueda,
+    .formulario-eventos {
+        flex-wrap: wrap;
+    }
+
+    .formulario-busqueda .campo-busqueda,
+    .formulario-eventos .campo-busqueda {
+        flex: 1 1 200px;
+    }
+
+    /* DETALLES DE RUTAS Y EVENTOS */
+    .pagina-detalle-ruta,
+    .pagina-detalle-evento {
+        padding: 35px 30px 70px;
+    }
+
+    .contenido-detalle-ruta,
+    .contenido-detalle-evento {
+        grid-template-columns: minmax(0, 1fr) 280px;
+        gap: 28px;
+    }
+
+    .imagen-detalle-ruta,
+    .imagen-detalle-evento {
+        height: 340px;
+    }
+
+    .titulo-detalle-ruta,
+    .titulo-detalle-evento {
+        gap: 24px;
+    }
+
+    .estadisticas-ruta,
+    .estadisticas-evento {
+        gap: 20px;
+    }
+
+    /* FOOTER */
+    .contenido-footer {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .navegacion-footer {
+        gap: 16px;
+    }
+}
+
+
+
+
+
+/* _______________ RESPONSIVE · MÓVIL _____________________ */
+
+@media screen and (max-width: 767px) {
+
+    /* CONFIGURACIÓN GENERAL */
+    body {
+        font-size: 14px;
+    }
+
+    /* CABECERA */
+    .contenedor-cabecera {
+        min-height: 72px;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        width: 145px;
+    }
+
+    .boton-menu {
+        width: 44px;
+        height: 44px;
+    }
+
+    .boton-menu span {
+        width: 26px;
+        height: 3px;
+    }
+
+    /* INICIO */
+    .hero {
+        min-height: 580px;
+    }
+
+    .contenido-hero {
+        padding: 80px 20px;
+    }
+
+    .contenido-hero h1 {
+        max-width: 100%;
+        font-size: 38px;
+        line-height: 1.1;
+    }
+
+    .contenido-hero p {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .contenido-hero .boton-principal,
+    .contenido-hero .boton-secundario {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    /* PÁGINAS DE RUTAS Y EVENTOS */
+    .pagina-rutas,
+    .pagina-eventos {
+        padding: 45px 20px 60px;
+    }
+
+    .introduccion-rutas h1,
+    .introduccion-eventos h1 {
+        font-size: 34px;
+    }
+
+    .introduccion-rutas p,
+    .introduccion-eventos p {
+        font-size: 14px;
+    }
+
+    /* BUSCADORES */
+    .buscador-rutas,
+    .buscador-eventos {
+        padding: 18px;
+        margin-bottom: 36px;
+    }
+
+    .formulario-busqueda,
+    .formulario-eventos {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .formulario-busqueda .campo-busqueda,
+    .formulario-eventos .campo-busqueda {
+        width: 100%;
+        flex: none;
+    }
+
+    .formulario-busqueda button,
+    .formulario-eventos button {
+        width: 100%;
+    }
+
+    /* FILTROS */
+    .lista-filtros {
+        gap: 8px;
+    }
+
+    .filtro {
+        min-height: 40px;
+        padding: 0 15px;
+        font-size: 12px;
+    }
+
+    /* TARJETAS */
+    .rejilla-rutas,
+    .rejilla-eventos {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .img-ruta,
+    .img-evento {
+        height: 220px;
+    }
+
+    .contenido-tarjeta,
+    .contenido-evento {
+        padding: 20px 16px 16px;
+    }
+
+    /* DETALLES DE RUTAS Y EVENTOS */
+    .pagina-detalle-ruta,
+    .pagina-detalle-evento {
+        padding: 25px 20px 60px;
+    }
+
+    .volver-pagina {
+        margin-bottom: 24px;
+    }
+
+    .cabecera-detalle-ruta,
+    .cabecera-detalle-evento {
+        margin-bottom: 32px;
+    }
+
+    .imagen-detalle-ruta,
+    .imagen-detalle-evento {
+        height: 240px;
+    }
+
+    .titulo-detalle-ruta,
+    .titulo-detalle-evento {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+        padding: 24px 0;
+    }
+
+    .informacion-titulo-ruta h1,
+    .informacion-titulo-evento h1 {
+        font-size: 27px;
+    }
+
+    .estadisticas-ruta,
+    .estadisticas-evento {
+        width: 100%;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .dato-ruta strong,
+    .dato-evento strong {
+        font-size: 13px;
+    }
+
+    /* COLUMNAS DE INFORMACIÓN */
+    .contenido-detalle-ruta,
+    .contenido-detalle-evento {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .informacion-principal-ruta,
+    .informacion-principal-evento {
+        gap: 32px;
+    }
+
+    .sobre-ruta h2,
+    .sobre-evento h2,
+    .recorrido-ruta h2,
+    .programa-evento h2,
+    .detalles-ruta h2,
+    .informacion-practica-evento h2,
+    .organizador-ruta h2,
+    .organizador-evento h2 {
+        font-size: 18px;
+    }
+
+    .informacion-recorrido {
+        padding: 16px;
+    }
+
+    .mapa-ruta {
+        height: 220px;
+    }
+
+    .actividad-evento {
+        gap: 14px;
+        padding: 18px 0;
+    }
+
+    .hora-evento {
+        min-width: 65px;
+    }
+
+    /* PANEL DE RESERVA */
+    .reserva-ruta,
+    .reserva-evento {
+        position: static;
+        padding: 20px;
+    }
+
+    .precio-ruta,
+    .precio-evento {
+        gap: 10px;
+    }
+
+    .precio-ruta h2,
+    .precio-evento h2 {
+        font-size: 22px;
+    }
+
+    .plazas-disponibles,
+    .plazas-disponibles-evento {
+        font-size: 10px;
+    }
+
+    /* MODALES */
+    .contenido-modal {
+        padding: 28px 22px;
+    }
+
+    .contenido-modal h2 {
+        font-size: 22px;
+    }
+
+    /* ERROR 404 */
+    .contenido-error {
+        padding: 30px 20px;
+    }
+
+    .logo-error {
+        width: 150px;
+        margin-bottom: 60px;
+    }
+
+    .numero-error {
+        font-size: 90px;
+        letter-spacing: -5px;
+    }
+
+    .informacion-error h1 {
+        font-size: 34px;
+    }
+
+    .informacion-error p {
+        font-size: 14px;
+    }
+
+    /* FOOTER */
+    .contenido-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 35px 20px;
+        gap: 24px;
+    }
+
+    .logo-footer {
+        width: 150px;
+    }
+
+    .navegacion-footer {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 16px 22px;
+    }
+
+    .copyright {
+        text-align: left;
+        line-height: 1.6;
+    }
+}
