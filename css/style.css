@@ -553,12 +553,6 @@ button {
 
 
 
-
-
-
-
-
-
 /* _______________ EVENTOS _____________________ */
 
 /* INTRODUCCIÓN */
@@ -635,7 +629,7 @@ button {
 
 /* IMAGEN Y FECHA */
 
-.foto-evento {
+.img-evento {
     position: relative;
     width: 100%;
     height: 205px;
@@ -686,6 +680,7 @@ button {
     justify-content: space-between;
     align-items: flex-end;
     gap: 12px;
+    margin-bottom: 28px;
 }
 
 .organizador-evento span {
@@ -709,7 +704,6 @@ button {
     color: var(--blanco);
     font-size: 13px;
     font-weight: 500;
-    margin-bottom: 28px;
 }
 
 .nombre-organizador i {
@@ -935,3 +929,96 @@ button {
         text-align: right;
         flex-shrink: 0;
     }
+
+
+
+
+
+/* _______________ ERROR 404 _____________________ */
+
+.pagina-error {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--negro);
+}
+
+
+.contenido-error {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* LOGOTIPO */
+
+.logo-error {
+    display: block;
+    width: 190px;
+    margin-bottom: 50px;
+}
+
+.logo-error img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+/* INFORMACIÓN DEL ERROR */
+
+.informacion-error {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 560px;
+}
+
+.numero-error {
+    margin-bottom: 12px;
+    color: var(--rojo);
+    font-size: 120px;
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -8px;
+}
+
+.etiqueta-error {
+    margin-bottom: 20px;
+    color: var(--gris);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.informacion-error h1 {
+    margin-bottom: 18px;
+    color: var(--blanco);
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.informacion-error p {
+    max-width: 440px;
+    margin-bottom: 30px;
+    color: var(--gris);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+
+/* BOTONES Y ENLACES */
+    .informacion-error .boton-error {
+        margin-bottom: 18px;
+    }
+
