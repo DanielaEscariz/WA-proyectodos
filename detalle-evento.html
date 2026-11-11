@@ -5,13 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quedada Atazar</title>
 
-         <!-- Tipografía Inter -->
+        <!-- Tipografía Inter -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
         <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">  
        
     </head>
 
@@ -61,7 +64,7 @@
             <section class="cabecera-detalle-evento">
 
                 <div class="imagen-detalle-evento">
-                    <img src="#" alt="Motoristas durante una rodada por la Sierra de Madrid">
+                    <img src="media/img/rutas/ruta1.webp" alt="Motoristas durante una rodada por la Sierra de Madrid">
                 </div>
 
                 <div class="titulo-detalle-evento">
@@ -190,7 +193,9 @@
                         <h2>Organizado por:</h2>
 
                         <div class="datos-organizador">
-                            <span class="icono-organizador">◉</span>
+                            <div class="icono-organizador">
+                                <i class="fa-solid fa-user" ></i>   
+                            </div>
                             <p>Escariz Rider</p>
                         </div>
                     </section>
@@ -231,11 +236,11 @@
         <div class="modal-aviso" id="modal-evento">
             <div class="contenido-modal">
                 <button type="button" class="cerrar-modal" id="cerrar-modal-evento" aria-label="Cerrar">
-                    ×
+                   <i class="fa-solid fa-xmark"></i>
                 </button>
 
                 <div class="icono-modal">
-                    ✓
+                    <i class="fa-solid fa-check"></i>
                 </div>
 
                 <span class="etiqueta-modal">CONFIRMACIÓN DE EVENTO</span>
