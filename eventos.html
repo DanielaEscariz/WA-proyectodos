@@ -126,23 +126,23 @@
                   <h2>FILTROS RÁPIDOS</h2>
 
                     <div class="lista-filtros">
-                        <button type="button" class="filtro activo">
+                        <button type="button" class="filtro activo" data-filtro="todas">
                             Todas
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="cerca">
                             Cerca de mí
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="fin-semana">
                             Este fin de semana
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="concentraciones">
                             Concentraciones
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="sociales">
                             Encuentros sociales
                         </button>
                     </div>
@@ -152,14 +152,14 @@
             <!-- RESULTADOS -->
             <section class="resultados-eventos">
                 <div class="cabecera-resultados">
-                    <h3>20 EVENTOS ENCONTRADOS</h3>
+                    <h3 id="contador-eventos">6 EVENTOS ENCONTRADOS</h3>
                 </div>
 
                 <!-- TARJETAS DE EVENTOS -->
                 <div class="rejilla-eventos">
 
                     <!-- EVENTO 1 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="si" data-fin-semana="si" data-categoria="sociales">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento7.webp" alt="Evento 1">
@@ -200,7 +200,7 @@
 
 
                     <!-- EVENTO 2 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="si" data-fin-semana="no" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento1.webp" alt="Evento 2">
@@ -239,7 +239,7 @@
 
 
                    <!-- EVENTO 3 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="no" data-fin-semana="si" data-categoria="sociales">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento3.webp" alt="Evento 3">
@@ -278,7 +278,7 @@
 
 
                    <!-- EVENTO 4 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="no" data-fin-semana="si" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento4.webp" alt="Evento 3">
@@ -318,7 +318,7 @@
 
 
                    <!-- EVENTO 5 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="no" data-fin-semana="si" data-categoria="sociales">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento5.webp" alt="Evento 3">
@@ -359,7 +359,7 @@
 
 
                    <!-- EVENTO 6 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-cerca="si" data-fin-semana="no" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento6.webp" alt="Evento 3">

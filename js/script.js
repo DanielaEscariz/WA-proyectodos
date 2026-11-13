@@ -6,7 +6,6 @@ $(document).ready(function() {
         evento.stopPropagation();
         $("#navegacion").slideToggle();
         $(this).toggleClass("abierto");
-
     });
 
 
@@ -15,12 +14,24 @@ $(document).ready(function() {
         evento.stopPropagation();
     });
 
+// Corrección error en menú ordenador, diferenciando entre menú ordenador y menú tablet/móvil 
     $(document).on("click", function() {
-        $("#navegacion").slideUp();
-        $("#boton-menu").removeClass("abierto");
-
+        // Cerrar el menú solo en tablet y móvil (cuando sea menor de 1024px)
+        if ($(window).width() <= 1024) {
+            $("#navegacion").slideUp();
+            $("#boton-menu").removeClass("abierto");
+        }
     });
 
+    // Restaurar el menú
+    $(window).on("resize", function() {
+        if ($(window).width() > 1024) {
+            $("#navegacion").show();
+            $("#boton-menu").removeClass("abierto");
+        } else {
+            $("#navegacion").hide();
+        }
+    });
 
 
 
@@ -190,6 +201,52 @@ $(document).ready(function() {
 
 
 
+
+// FILTROS DE BÚSQUEDA DE EVENTOS________________________
+
+// Hacer click en el filtro
+    $(".filtro").on("click", function() {
+        // Guardamos el filtro seleccionado
+        var filtroSeleccionado = $(this).data("filtro");
+
+        // Cambiar el botón a activo
+        $(".filtro").removeClass("activo");
+        $(this).addClass("activo");
+
+        // Ver TODOS los eventos
+        if (filtroSeleccionado == "todas") {
+            $(".tarjeta-evento").show();
+        }
+
+        // Filtra por eventos CERCANOS
+        else if (filtroSeleccionado == "cerca") {
+            $(".tarjeta-evento").hide();
+            $('.tarjeta-evento[data-cerca="si"]').show();
+        }
+
+        // Filtra por eventos del FIN DE SEMANA
+        else if (filtroSeleccionado == "fin-semana") {
+            $(".tarjeta-evento").hide();
+            $('.tarjeta-evento[data-fin-semana="si"]').show();
+        }
+
+        // Filtra por CONCENTRACIONES
+        else if (filtroSeleccionado == "concentraciones") {
+            $(".tarjeta-evento").hide();
+            $('.tarjeta-evento[data-categoria="concentraciones"]').show();
+        }
+
+        // Filtra por ENCUENTROS SOCIALES
+        else if (filtroSeleccionado == "sociales") {
+            $(".tarjeta-evento").hide();
+            $('.tarjeta-evento[data-categoria="sociales"]').show();
+        }
+
+        // Actualizar el número de contador de eventos
+        var totalEventos = $(".tarjeta-evento:visible").length;
+        $("#contador-eventos").text(totalEventos + " EVENTOS ENCONTRADOS");
+
+    });
 
 
 });
