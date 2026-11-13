@@ -543,8 +543,14 @@ button {
     border-color: var(--rojo);
 }
 
+/* CAMBIO DEL ESTADO DEL CORAZÓN */
+.guardar-ruta i {
+    transition: color 0.2s ease;
+}
 
-
+.guardar-ruta i.fa-solid {
+    color: #FF0000;
+}
 
 
 /* _______________ EVENTOS _____________________ */
@@ -738,6 +744,14 @@ button {
 }
 
 
+/* CAMBIO DE ESTADO DEL CORAZÓN */
+.guardar-evento i {
+    transition: color 0.2s ease;
+}
+
+.guardar-evento i.fa-solid {
+    color: #FF0000;
+}
 
 /* _______________ UNIFICACIÓN DE CSS BUSCADORES DE RUTAS Y EVENTOS _____________________ */
 
@@ -1255,29 +1269,34 @@ button {
 
 
 /* VENTANA MODAL */
-.modal-aviso {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.80);
-}
+    .modal-aviso {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+    }
 
-.contenido-modal {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
-    padding: 36px;
-    background-color: var(--carbon);
-    border: 1px solid var(--grisoscuro);
-    border-radius: 10px;
-}
+    .contenido-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 50%;
+        max-width: 550px;
+        min-width: 300px;
+
+        max-height: 90%;
+        overflow-y: auto;
+
+        background-color: #0F0F0F;
+        border: 1px solid #292929;
+        padding: 40px;
+    }
 
 /* CERRAR MODAL */
 .cerrar-modal {
@@ -2016,6 +2035,15 @@ button {
     .informacion-error p {
         font-size: 14px;
     }
+
+
+    /* ventana modal */
+    .contenido-modal {
+        width: 90%;
+        min-width: 0;
+        padding: 30px 22px;
+    }
+
 
     /* FOOTER */
     .contenido-footer {

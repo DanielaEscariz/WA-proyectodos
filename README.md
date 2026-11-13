@@ -34,3 +34,27 @@ Ej js: modificamos todas las animaciones a la vez en js:
         AOS.init({
         duration: 2000
         }); 
+
+
+
+
+
+
+
+
+# FALTA POR HACER: 
+- JS: Ventana modal
+- JS: Tarjetas favoritos
+- JS: Filtros de búsqueda
+- JS: Formularios
+
+
+- AOS: aparecer las tarjetas
+- AOS: Botón subir???
+- AOS: Título index
+
+
+REVISIÓN TOTAL
+CHEQUEAR CON: 
+https://jigsaw.w3.org/css-validator/ (PDF de entrega- evaluación)
+https://validator.w3.org/ (PDF de entrega- evaluación)
