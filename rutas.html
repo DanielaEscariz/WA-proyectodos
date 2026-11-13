@@ -140,21 +140,21 @@
                 <h2>FILTROS RÁPIDOS</h2>
 
                 <div class="lista-filtros">
-                    <button type="button" class="filtro activo">Todas</button>
+                    <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="cerca">
                         Cerca de mí
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="fin-semana">
                         Este fin de semana
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="medio">
                         Nivel medio
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="curvas">
                         Carreteras con curvas
                     </button>
                 </div>
@@ -164,7 +164,7 @@
             <!-- RESULTADOS -->
             <section class="resultados-rutas">
                 <div class="cabecera-resultados">
-                    <h3>24 RUTAS ENCONTRADAS</h3>
+                    <h3 id="contador-rutas">9 RUTAS ENCONTRADAS</h3>
                 </div>
 
 
@@ -172,7 +172,7 @@
                 <div class="rejilla-rutas">
 
                     <!-- RUTA 1 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -222,7 +222,7 @@
 
 
                     <!-- RUTA 2 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="no" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -271,7 +271,7 @@
 
 
                     <!-- RUTA 3 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="avanzado" data-cerca="si" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -320,7 +320,7 @@
 
 
                     <!-- RUTA 4 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -369,7 +369,7 @@
 
 
                     <!-- RUTA 5 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="bajo" data-cerca="no" data-fin-semana="no" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -419,7 +419,7 @@
 
 
                    <!-- RUTA 6 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -468,7 +468,7 @@
 
 
                    <!-- RUTA 7 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -517,7 +517,7 @@
 
 
                    <!-- RUTA 8 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -566,7 +566,7 @@
 
                     
                    <!-- RUTA 9 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-nivel="avanzado">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
