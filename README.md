@@ -38,11 +38,23 @@ Ej js: modificamos todas las animaciones a la vez en js:
 
 
 
+<!-- Otra librería -->
+https://mattboldt.github.io/typed.js/
+
+
+<!-- OTRA -->
+         <!-- SIMPLEPARADAX -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@7.0.0/dist/vanilla/simpleParallaxVanilla.umd.min.js"></script>
+
+
+
+
 
 
 
 
 # FALTA POR HACER: 
+- Meter un slideshow en el index
 - JS: Ventana modal [OKEY]
 - JS: Tarjetas favoritos [OKEY]
 - JS: Filtros de búsqueda [OKEY]

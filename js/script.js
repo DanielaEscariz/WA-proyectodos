@@ -310,13 +310,66 @@ $(document).ready(function() {
     });
 
 
+
+
+
+
+
+
+// FORMULARIO DE BÚSQUEDA DE EVENTOS________________________
+
+    $("#formulario-eventos").on("submit", function(evento) {
+
+        evento.preventDefault();
+
+        var zona = $("#zona-evento").val();
+        var fecha = $("#fecha-evento").val();
+        var horario = $("#ritmo-evento").val();
+        var categoria = $("#tipo-carretera").val();
+
+        // Igual que en rutas, todas las tarjetas escondidas para enseñar solo las que correspondan son la selección.
+        $(".tarjeta-evento").hide();
+
+        var selector = ".tarjeta-evento";
+
+        // FILTRO DE ZONA (mismo procedimiento que rutas)
+        selector = selector + '[data-zona="si"]';
+
+        // FILTRO DE FECHA (mismo procedimiento que rutas)
+        if (fecha != "") {
+            var year = fecha.substring(0, 4);
+            if (year == "2026") {
+                selector = selector + '[data-fin-semana="no"]';
+            }
+            else if (year >= "2027") {
+                selector = selector + '[data-fin-semana="si"]';
+            }
+        }
+
+        // FILTRO DE HORARIO (mismo procedimiento que rutas)
+        if (horario != "") {
+            selector = selector + '[data-horario="' + horario + '"]';
+        }
+
+        // FILTRO DE TIPO DE EVENTO (mismo procedimiento que rutas)
+        if (categoria != "") {
+            selector = selector + '[data-categoria="' + categoria + '"]';
+        }
+
+        // Cuando das a buscar se muestran las tarjetas que coincidan con la selección (mismo procedimiento que rutas)
+        $(selector).show();
+
+        // Actualizar el número del contador (mismo procedimiento que rutas)
+        var totalEventos = $(".tarjeta-evento:visible").length;
+
+        $("#contador-eventos").text(totalEventos + " EVENTOS ENCONTRADOS");
+    });
+
+
+
+
+
+
+    
+
 });
-
-
-
-
-
-
-
-
-
