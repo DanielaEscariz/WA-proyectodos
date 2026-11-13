@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">           
     </head>
@@ -51,6 +54,10 @@
 
             <!-- INTRODUCCIÓN -->
             <section class="introduccion-eventos">
+                <p class="texto-superior-rutas">
+                    DESCUBRE · FILTRA · RUEDA
+                </p>
+
                 <h1>Apúntate a la próxima quedada.</h1>
 
                 <p>
@@ -58,97 +65,94 @@
                 </p>
             </section>
 
-
             <!-- BUSCADOR DE EVENTOS -->
             <section class="buscador-eventos">
+
                 <form class="formulario-eventos">
-                    <div class="campo-busqueda">
-                        <label for="zona-evento">Zona</label>
 
-                        <select id="zona-evento" name="zona">
-                            <option value="">Ej. Sierra de Guadarrama</option>
-                            <option value="madrid">Madrid</option>
-                            <option value="segovia">Segovia</option>
-                            <option value="avila">Ávila</option>
-                        </select>
+                    <!-- ZONA -->
+                    <div class="campo-busqueda">
+                        <label for="zona-evento">ZONA</label>
+                        <input type="text" id="zona-evento" name="zona"
+                            placeholder="Ej. Sierra de Guadarrama">
                     </div>
 
-
+                    <!-- FECHA -->
                     <div class="campo-busqueda">
-                        <label for="fecha-evento">Cuándo</label>
-
-                        <select id="fecha-evento" name="fecha">
-                            <option value="">Cualquier fecha</option>
-                            <option value="hoy">Hoy</option>
-                            <option value="semana">Esta semana</option>
-                            <option value="mes">Este mes</option>
-                        </select>
+                        <label for="fecha-evento">CUÁNDO</label>
+                        <input type="date" id="fecha-evento" name="fecha">
                     </div>
 
-
+                    <!-- HORARIO  -->
                     <div class="campo-busqueda">
-                        <label for="ritmo-evento">Ritmo</label>
+                        <label for="ritmo-evento">HORARIO</label>
 
-                        <select id="ritmo-evento" name="ritmo">
-                            <option value="">Todos los niveles</option>
-                            <option value="tranquilo">Tranquilo</option>
-                            <option value="medio">Medio</option>
-                            <option value="avanzado">Avanzado</option>
-                        </select>
+                        <div class="contenedor-select">
+                            <select id="ritmo-evento" name="ritmo">
+                                <option value="">Todo el día</option>
+                                <option value="mañana">Mañana</option>
+                                <option value="tarde">Tarde</option>
+                                <option value="noche">Noche</option>
+                            </select>
+                        </div>
                     </div>
 
-
+                    <!-- TIPO DE EVENTO -->
                     <div class="campo-busqueda">
-                        <label for="tipo-evento">Tipo de carretera</label>
+                        <label for="tipo-carretera">TIPO DE EVENTO</label>
 
-                        <select id="tipo-evento" name="tipo">
-                            <option value="">Todas</option>
-                            <option value="curvas">Carreteras con curvas</option>
-                            <option value="nacional">Carreteras nacionales</option>
-                            <option value="autovia">Autovía</option>
-                        </select>
+                        <div class="contenedor-select">
+                            <select id="tipo-carretera" name="tipo-carretera">
+                                <option value="">Todas</option>
+                                <option value="concentracion">Concentración</option>
+                                <option value="encuentro social">Encuentro social</option>
+                                <option value="planes">Planes</option>
+                            </select>
+                        </div>
                     </div>
 
-
+                    <!-- BOTÓN BUSCAR -->
                     <button type="submit" class="boton-buscar">
-                        Buscar
+                        BUSCAR
                     </button>
+
                 </form>
             </section>
 
 
+
             <!-- FILTROS RÁPIDOS -->
-            <section class="seccion-filtros-eventos">
-                <p class="titulo-filtros">Filtros rápidos</p>
+            <section class="seccion-filtros">
+                  <h2>FILTROS RÁPIDOS</h2>
 
-                <div class="lista-filtros">
-                    <button type="button" class="filtro-activo">
-                        Todas
-                    </button>
+                    <div class="lista-filtros">
+                        <button type="button" class="filtro activo">
+                            Todas
+                        </button>
 
-                    <button type="button" class="filtro-evento">
-                        Cerca de mí
-                    </button>
+                        <button type="button" class="filtro">
+                            Cerca de mí
+                        </button>
 
-                    <button type="button" class="filtro-evento">
-                        Este fin de semana
-                    </button>
+                        <button type="button" class="filtro">
+                            Este fin de semana
+                        </button>
 
-                    <button type="button" class="filtro-evento">
-                        Concentraciones
-                    </button>
+                        <button type="button" class="filtro">
+                            Concentraciones
+                        </button>
 
-                    <button type="button" class="filtro-evento">
-                        Encuentros sociales
-                    </button>
-                </div>
+                        <button type="button" class="filtro">
+                            Encuentros sociales
+                        </button>
+                    </div>
             </section>
 
 
             <!-- RESULTADOS -->
             <section class="resultados-eventos">
                 <div class="cabecera-resultados">
-                    <p>24 EVENTOS ENCONTRADOS</p>
+                    <h3>20 EVENTOS ENCONTRADOS</h3>
                 </div>
 
                 <!-- TARJETAS DE EVENTOS -->
@@ -156,101 +160,244 @@
 
                     <!-- EVENTO 1 -->
                     <article class="tarjeta-evento">
-                        <div class="foto-evento foto-desayuno">
-                            <span class="fecha-evento">17 noviembre</span>
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento7.webp" alt="Evento 1">
+                            <span class="fecha-evento">20 noviembre</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-evento">
-                            <h2>Desayuno entre curvas</h2>
+                            <h2>Papanoelada</h2>
 
-                            <p class="ubicacion-evento">El Escorial</p>
+                            <p class="ubicacion-evento">Madrid</p>
 
                             <div class="informacion-evento">
                                 <div class="organizador-evento">
-                                    <span>Organizado por</span>
-                                    <p>◉ EscarizRider</p>
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @escarizrider
+                                    </p>
                                 </div>
 
-                                <p class="plazas-evento">14 / 20 plazas</p>
+                                <p class="plazas-evento">99 / 200 plazas</p>
                             </div>
 
                             <div class="pie-tarjeta-evento">
                                 <a href="detalle-evento.html" class="boton-ver-evento">
                                     Ver evento
                                 </a>
-
                                 <button type="button" class="guardar-evento" aria-label="Guardar evento">
-                                    ♡
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
                     </article>
+
+
 
 
                     <!-- EVENTO 2 -->
                     <article class="tarjeta-evento">
-                        <div class="foto-evento foto-concentracion">
-                            <span class="fecha-evento">17 noviembre</span>
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento1.webp" alt="Evento 2">
+                            <span class="fecha-evento">25 noviembre</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-evento">
                             <h2>Concentración Madrid Riders</h2>
 
-                            <p class="ubicacion-evento">Alcobendas - Madrid</p>
+                            <p class="ubicacion-evento">Hortaleza</p>
 
                             <div class="informacion-evento">
                                 <div class="organizador-evento">
-                                    <span>Organizado por</span>
-                                    <p>◉ MadridMoteros</p>
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @demoteros
+                                    </p>
                                 </div>
 
-                                <p class="plazas-evento">14 / 20 plazas</p>
+                                <p class="plazas-evento">43 / 50 plazas</p>
                             </div>
 
                             <div class="pie-tarjeta-evento">
                                 <a href="detalle-evento.html" class="boton-ver-evento">
                                     Ver evento
                                 </a>
-
                                 <button type="button" class="guardar-evento" aria-label="Guardar evento">
-                                    ♡
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
                     </article>
 
 
-                    <!-- EVENTO 3 -->
+                   <!-- EVENTO 3 -->
                     <article class="tarjeta-evento">
-                        <div class="foto-evento foto-paracuellos">
-                            <span class="fecha-evento">17 noviembre</span>
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento3.webp" alt="Evento 3">
+                            <span class="fecha-evento">28 noviembre</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-evento">
-                            <h2>Encuentro Paracuellos</h2>
+                            <h2>Freestyle</h2>
 
-                            <p class="ubicacion-evento">Paracuellos del Jarama - Madrid</p>
+                            <p class="ubicacion-evento">Madrid</p>
 
                             <div class="informacion-evento">
                                 <div class="organizador-evento">
-                                    <span>Organizado por</span>
-                                    <p>◉ ClubHortaleza</p>
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @mulasmotor
+                                    </p>
                                 </div>
 
-                                <p class="plazas-evento">14 / 20 plazas</p>
+                                <p class="plazas-evento">75 / 99 plazas</p>
                             </div>
 
                             <div class="pie-tarjeta-evento">
                                 <a href="detalle-evento.html" class="boton-ver-evento">
                                     Ver evento
                                 </a>
-
                                 <button type="button" class="guardar-evento" aria-label="Guardar evento">
-                                    ♡
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
                                 </button>
                             </div>
                         </div>
                     </article>
+
+
+                   <!-- EVENTO 4 -->
+                    <article class="tarjeta-evento">
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento4.webp" alt="Evento 3">
+                            <span class="fecha-evento">01 diciembre</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-evento">
+                            <h2>Concentración Invernal</h2>
+
+                            <p class="ubicacion-evento">Madrid</p>
+
+                            <div class="informacion-evento">
+                                <div class="organizador-evento">
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @mulasmotor
+                                    </p>
+                                </div>
+
+                                <p class="plazas-evento">35 / 50 plazas</p>
+                            </div>
+
+                            <div class="pie-tarjeta-evento">
+                                <a href="detalle-evento.html" class="boton-ver-evento">
+                                    Ver evento
+                                </a>
+                                <button type="button" class="guardar-evento" aria-label="Guardar evento">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+                   <!-- EVENTO 5 -->
+                    <article class="tarjeta-evento">
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento5.webp" alt="Evento 3">
+                            <span class="fecha-evento">04 diciembre</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-evento">
+                            <h2>Evento nocturno</h2>
+
+                            <p class="ubicacion-evento">Vallecas</p>
+
+                            <div class="informacion-evento">
+                                <div class="organizador-evento">
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @gasgas
+                                    </p>
+                                </div>
+
+                                <p class="plazas-evento">10 / 25 plazas</p>
+                            </div>
+
+                            <div class="pie-tarjeta-evento">
+                                <a href="detalle-evento.html" class="boton-ver-evento">
+                                    Ver evento
+                                </a>
+                                <button type="button" class="guardar-evento" aria-label="Guardar evento">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
+                   <!-- EVENTO 6 -->
+                    <article class="tarjeta-evento">
+                        <!-- IMAGEN Y FEHCA -->
+                        <div class="img-evento">
+                            <img src="media/img/eventos/evento6.webp" alt="Evento 3">
+                            <span class="fecha-evento">08 diciembre</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-evento">
+                            <h2>Desayuno Segoviano</h2>
+
+                            <p class="ubicacion-evento">Segovia</p>
+
+                            <div class="informacion-evento">
+                                <div class="organizador-evento">
+                                    <span>ORGANIZADO POR</span>
+                                    <p class="nombre-organizador">
+                                        <!-- ICONO USER -->
+                                        <i class="fa-solid fa-user" aria-hidden="true"></i>
+                                        @segoriders
+                                    </p>
+                                </div>
+
+                                <p class="plazas-evento">32 / 60 plazas</p>
+                            </div>
+
+                            <div class="pie-tarjeta-evento">
+                                <a href="detalle-evento.html" class="boton-ver-evento">
+                                    Ver evento
+                                </a>
+                                <button type="button" class="guardar-evento" aria-label="Guardar evento">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+
                 </div>
             </section>
         </main>
@@ -280,5 +427,6 @@
         
     </body>
 </html>
+
 
 

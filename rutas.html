@@ -10,6 +10,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css">        
     </head>
@@ -47,7 +50,10 @@
 
                 <!-- ACCIONES DE USUARIO -->
                 <div class="acciones-cabecera">
-                    <a href="404.html" class="enlace-perfil">Perfil</a>
+                    <div class="enlace-perfil">
+                        <a href="404.html"> Perfil </a>
+                       <!-- ICONO USER: <h2><i class="fa-solid fa-user"></i></h2>  -->
+                    </div>
                     <a href="404.html" class="boton-crear">Crear ruta</a>
                 </div>
             </div>
@@ -73,7 +79,6 @@
 
             <!-- BUSCADOR DE RUTAS -->
             <section class="buscador-rutas">
-
                 <form class="formulario-busqueda">
 
                     <!-- ZONA -->
@@ -85,33 +90,39 @@
                     <!-- FECHA -->
                     <div class="campo-busqueda">
                         <label for="fecha">CUÁNDO</label>
-                        <select id="fecha" name="fecha">
-                            <option value="">Cualquier fecha</option>
-                            <option value="hoy">Hoy</option>
-                            <option value="fin-semana">Este fin de semana</option>
-                        </select>
+                        <input type="date" id="fecha" name="fecha">
                     </div>
 
                     <!-- RITMO -->
                     <div class="campo-busqueda">
                         <label for="ritmo">RITMO</label>
-                        <select id="ritmo" name="ritmo">
-                            <option value="">Todos los niveles</option>
-                            <option value="tranquilo">Tranquilo</option>
-                            <option value="medio">Medio</option>
-                            <option value="avanzado">Avanzado</option>
-                        </select>
+
+                        <div class="contenedor-select">
+                            <select id="ritmo" name="ritmo">
+                                <option value="">Todos los niveles</option>
+                                <option value="tranquilo">Tranquilo</option>
+                                <option value="medio">Medio</option>
+                                <option value="avanzado">Avanzado</option>                                
+                            </select>
+
+                            <!-- <span class="flecha-select">⌄</span> -->
+                        </div>
                     </div>
 
                     <!-- TIPO DE CARRETERA -->
                     <div class="campo-busqueda">
                         <label for="tipo-carretera">TIPO DE CARRETERA</label>
-                        <select id="tipo-carretera" name="tipo-carretera">
-                            <option value="">Todas</option>
-                            <option value="curvas">Carreteras con curvas</option>
-                            <option value="autovia">Autovía</option>
-                            <option value="montana">Carreteras de montaña</option>
-                        </select>
+
+                        <div class="contenedor-select">
+                            <select id="tipo-carretera" name="tipo-carretera">
+                                <option value="">Todas</option>
+                                <option value="curvas">Carreteras con curvas</option>
+                                <option value="autovia">Autovía</option>
+                                <option value="montana">Carreteras de montaña</option>
+                            </select>
+                            
+                            <!-- <span class="flecha-select">⌄</span> -->
+                        </div>
                     </div>
 
                     <!-- BOTÓN BUSCAR -->
@@ -152,9 +163,8 @@
 
             <!-- RESULTADOS -->
             <section class="resultados-rutas">
-
                 <div class="cabecera-resultados">
-                    <h2>24 RUTAS ENCONTRADAS</h2>
+                    <h3>24 RUTAS ENCONTRADAS</h3>
                 </div>
 
 
@@ -163,17 +173,22 @@
 
                     <!-- RUTA 1 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-guadarrama">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta1.webp" alt="Puerto Navacerrada">
                             <span class="fecha-ruta">17 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
-                            <h3>Puerto Navacerrada</h3>
+                            <h2>Puerto Navacerrada</h2>
 
                             <p class="trayecto-ruta">
                                 Madrid → Puerto de Navacerrada
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -191,27 +206,39 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
 
 
+
                     <!-- RUTA 2 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-morcuera">
-                            <span class="fecha-ruta">18 NOVIEMBRE</span>
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta4.webp" alt="Ruta 2">
+                            <span class="fecha-ruta">21 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
-                            <h3>La Morcuera</h3>
+                            <h2>La Morcuera</h2>
 
                             <p class="trayecto-ruta">
-                                Madrid - La Morcuera
+                                Madrid → La Morcuera
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -229,9 +256,15 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
@@ -239,17 +272,22 @@
 
                     <!-- RUTA 3 -->
                     <article class="tarjeta-ruta">
-                        <div class="foto-ruta foto-cruz-verde">
-                            <span class="fecha-ruta">22 NOVIEMBRE</span>
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta3.webp" alt="Ruta 3">
+                            <span class="fecha-ruta">25 NOVIEMBRE</span>
                         </div>
 
+                        <!-- CONTENIDO -->
                         <div class="contenido-tarjeta">
-                            <h3>Cruz Verde</h3>
+                            <h2>Cruz verde</h2>
 
                             <p class="trayecto-ruta">
-                                Segovia - Cruz Verde
+                                Segovia → Cruz Verde
                             </p>
 
+                            <!-- DATOS DE LA RUTA -->
                             <div class="datos-ruta">
                                 <div>
                                     <span>DISTANCIA</span>
@@ -267,12 +305,317 @@
                                 </div>
                             </div>
 
+                            <!-- BOTONES -->
                             <div class="pie-tarjeta">
-                                <a href="detalle-ruta.html" class="boton-ver-ruta">VER RUTA</a>
-                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">♡</button>
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
                             </div>
                         </div>
                     </article>
+
+
+                    <!-- RUTA 4 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta2.webp" alt="Ruta 4">
+                            <span class="fecha-ruta">25 NOVIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>Atazar</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → Atazar
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>95 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>1 h 20 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Medio</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <!-- RUTA 5 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta5.webp" alt="Ruta 5">
+                            <span class="fecha-ruta">01 DICIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>Paracuellos de Jarama</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → Paracuellos de Jarama
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>40 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>30 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Bajo</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+                   <!-- RUTA 6 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta6.webp" alt="Ruta 6">
+                            <span class="fecha-ruta">05 DICIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>La Pedriza</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → La Pedriza
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>108 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>1 h 15 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Medio</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                   <!-- RUTA 7 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta7.webp" alt="Ruta 7">
+                            <span class="fecha-ruta">06 DICIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>Patones</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → Patones
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>130 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>1h 20 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Medio</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+                   <!-- RUTA 8 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta8.webp" alt="Ruta 8">
+                            <span class="fecha-ruta">12 DICIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>Pueblos Rojos</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → Pueblos Rojos
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>240 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>2h 15 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Avanzado</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+                    
+                   <!-- RUTA 9 -->
+                    <article class="tarjeta-ruta">
+
+                        <!-- IMAGEN Y FECHA -->
+                        <div class="img-ruta">
+                            <img src="media/img/rutas/ruta9.webp" alt="Ruta 9">
+                            <span class="fecha-ruta">08 DICIEMBRE</span>
+                        </div>
+
+                        <!-- CONTENIDO -->
+                        <div class="contenido-tarjeta">
+                            <h2>El Escorial</h2>
+
+                            <p class="trayecto-ruta">
+                                Madrid → El Escorial
+                            </p>
+
+                            <!-- DATOS DE LA RUTA -->
+                            <div class="datos-ruta">
+                                <div>
+                                    <span>DISTANCIA</span>
+                                    <p>290 km</p>
+                                </div>
+
+                                <div>
+                                    <span>DURACIÓN</span>
+                                    <p>3h 35 min</p>
+                                </div>
+
+                                <div>
+                                    <span>RITMO</span>
+                                    <p>Avanzado</p>
+                                </div>
+                            </div>
+
+                            <!-- BOTONES -->
+                            <div class="pie-tarjeta">
+                                <a href="detalle-ruta.html" class="boton-ver-ruta">
+                                    VER RUTA
+                                </a>
+
+                                <button type="button" class="guardar-ruta" aria-label="Guardar ruta">
+                                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+
+
+
+
                 </div>
             </section>
         </main>
@@ -302,3 +645,4 @@
         
     </body>
 </html>
+
