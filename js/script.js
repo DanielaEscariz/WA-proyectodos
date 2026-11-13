@@ -249,6 +249,67 @@ $(document).ready(function() {
     });
 
 
+
+
+
+
+
+
+
+// FORMULARIO DE BÚSQUEDA DE RUTAS________________________
+    $("#formulario-rutas").on("submit", function(evento) {
+
+        evento.preventDefault();
+
+        var zona = $("#zona").val();
+        var fecha = $("#fecha").val();
+        var ritmo = $("#ritmo").val();
+        var carretera = $("#tipo-carretera").val();
+
+        // Todas las tarjetas escondidas para enseñar solo las que correspondan son la selección.
+        $(".tarjeta-ruta").hide();
+        var selector = ".tarjeta-ruta";
+
+        // FILTRO DE ZONA: Da igual lo que se escriba en ese campo que si o si aparecerán las tarjetas. 
+        selector = selector + '[data-zona="si"]';
+
+        // FILTRO DE FECHA: si es 2026 se muestran las tarjetas de fin de semana no y si es 2027 se muestra fin de semana si.
+        if (fecha != "") {
+            var year = fecha.substring(0, 4);
+            if (year == "2026") {
+                selector = selector + '[data-fin-semana="no"]';
+            }
+            else if (year >= "2027") {
+                selector = selector + '[data-fin-semana="si"]';
+            }
+        }
+
+        // FILTRO DE RITMO: si es bajo se muestran las tarjetas que sean nivel bajo, lo mismo con medio y avanzso: 
+        if (ritmo != "") {
+            selector = selector + '[data-nivel="' + ritmo + '"]';
+        }
+
+        // FILTRO DE CARRETERA: si tienen en las tarjetas curvas si se muestran las curvas y si es no se muestran autovía: 
+        if (carretera == "curvas") {
+            selector = selector + '[data-curvas="si"]';
+        }
+        else if (carretera == "autovia") {
+            selector = selector + '[data-curvas="no"]';
+        }
+
+
+
+        // Cuando das a buscar se muestran las tarjetas que coincidan con la selección
+        $(selector).show();
+
+        // Actualizar el número del contador
+        var totalRutas = $(".tarjeta-ruta:visible").length;
+
+        $("#contador-rutas").text(totalRutas + " RUTAS ENCONTRADAS");
+
+    });
+
+
 });
 
 

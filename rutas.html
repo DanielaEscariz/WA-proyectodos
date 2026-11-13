@@ -79,7 +79,7 @@
 
             <!-- BUSCADOR DE RUTAS -->
             <section class="buscador-rutas">
-                <form class="formulario-busqueda">
+                <form class="formulario-busqueda" id="formulario-rutas">
 
                     <!-- ZONA -->
                     <div class="campo-busqueda">
@@ -100,7 +100,7 @@
                         <div class="contenedor-select">
                             <select id="ritmo" name="ritmo">
                                 <option value="">Todos los niveles</option>
-                                <option value="tranquilo">Tranquilo</option>
+                                <option value="bajo">Bajo</option>
                                 <option value="medio">Medio</option>
                                 <option value="avanzado">Avanzado</option>                                
                             </select>
@@ -118,7 +118,6 @@
                                 <option value="">Todas</option>
                                 <option value="curvas">Carreteras con curvas</option>
                                 <option value="autovia">Autovía</option>
-                                <option value="montana">Carreteras de montaña</option>
                             </select>
                             
                             <!-- <span class="flecha-select">⌄</span> -->
@@ -172,7 +171,7 @@
                 <div class="rejilla-rutas">
 
                     <!-- RUTA 1 -->
-                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
+                    <article class="tarjeta-ruta"  data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -222,7 +221,7 @@
 
 
                     <!-- RUTA 2 -->
-                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="no" data-fin-semana="no" data-curvas="no">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="no" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -271,7 +270,7 @@
 
 
                     <!-- RUTA 3 -->
-                    <article class="tarjeta-ruta" data-nivel="avanzado" data-cerca="si" data-fin-semana="no" data-curvas="no">
+                    <article class="tarjeta-ruta"  data-zona="si" data-nivel="avanzado" data-cerca="si" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -320,7 +319,7 @@
 
 
                     <!-- RUTA 4 -->
-                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="no">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -369,7 +368,7 @@
 
 
                     <!-- RUTA 5 -->
-                    <article class="tarjeta-ruta" data-nivel="bajo" data-cerca="no" data-fin-semana="no" data-curvas="si">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="tranquilo" data-cerca="no" data-fin-semana="no" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -419,7 +418,7 @@
 
 
                    <!-- RUTA 6 -->
-                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="no" data-curvas="no">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="bajo" data-cerca="si" data-fin-semana="no" data-curvas="no">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -449,7 +448,7 @@
 
                                 <div>
                                     <span>RITMO</span>
-                                    <p>Medio</p>
+                                    <p>Bajo</p>
                                 </div>
                             </div>
 
@@ -468,7 +467,7 @@
 
 
                    <!-- RUTA 7 -->
-                    <article class="tarjeta-ruta" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -517,7 +516,7 @@
 
 
                    <!-- RUTA 8 -->
-                    <article class="tarjeta-ruta" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -566,7 +565,7 @@
 
                     
                    <!-- RUTA 9 -->
-                    <article class="tarjeta-ruta" data-nivel="avanzado">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">

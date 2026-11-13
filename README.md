@@ -43,9 +43,9 @@ Ej js: modificamos todas las animaciones a la vez en js:
 
 
 # FALTA POR HACER: 
-- JS: Ventana modal
-- JS: Tarjetas favoritos
-- JS: Filtros de búsqueda
+- JS: Ventana modal [OKEY]
+- JS: Tarjetas favoritos [OKEY]
+- JS: Filtros de búsqueda [OKEY]
 - JS: Formularios
 
 
