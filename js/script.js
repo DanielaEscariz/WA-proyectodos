@@ -448,7 +448,7 @@ $("#confirmar-evento").on("click", function() {
 // ANIMACIONES AOS________________________
     AOS.init({
         duration: 600,
-        offset: 50
+        offset: 5
     });
 
 
