@@ -21,11 +21,6 @@
 # PREGUNTAR ADRIÁN: 
 - ¿Por qué mis AOS no funcionan bien con las tarjetas?
 
-# REVISIÓN TOTAL
-CHEQUEAR CON: 
-https://jigsaw.w3.org/css-validator/ (PDF de entrega- evaluación)
-https://validator.w3.org/ (PDF de entrega- evaluación)
-
 
 # LIBRERÍAS
 - ANIMACIÓN DE CONFETTI (Confeti):
@@ -38,4 +33,14 @@ https://validator.w3.org/ (PDF de entrega- evaluación)
     https://simpleparallax.com/
 
 - ANIMACIONES TYPED (Borrar texto y reescribir)
-    https://mattboldt.github.io/typed.js/
+
+
+
+
+# REVISIÓN TOTAL
+CHEQUEAR CON: 
+https://jigsaw.w3.org/css-validator/ (PDF de entrega- evaluación)  [OKEY]
+https://validator.w3.org/ (PDF de entrega- evaluación) [OKEY]
+
+    CAMBIOS:
+    https://mattboldt.github.io/typed.js/Warning: This document appears to be written in Spanish but the html start tag has lang="en". Consider using lang="es" (or variant) instead.
