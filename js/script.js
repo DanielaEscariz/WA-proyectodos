@@ -136,13 +136,13 @@ $(document).ready(function() {
     // Cuando pulso se modifica el corazón de rutas
     $(".guardar-ruta").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
-
+     
     });
 
     // Cuando pulso se modifica el corazón de eventos
     $(".guardar-evento").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
-
+      
     });
 
 
@@ -404,8 +404,37 @@ $(document).ready(function() {
 
 
 
+// CONFIRMACION DE ASISTENCIA CONFETI________________________
+
+$("#confirmar-evento").on("click", function() {
+    console.log("funciona");
+    
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ["#FF0033", "#FFFFFF"],
+    });
+
+    $("#modal-evento").fadeOut();
+
+});
 
 
+
+$("#confirmar-ruta").on("click", function() {
+    console.log("funciona");
+    
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ["#FF0033", "#FFFFFF"],
+    });
+
+    $("#modal-ruta").fadeOut();
+
+});
 
 
 
@@ -419,9 +448,46 @@ $(document).ready(function() {
 // ANIMACIONES AOS________________________
     AOS.init({
         duration: 600,
-        offset: 50
+        offset: 50,
     });
 
 
 
+// ANIMACIÓN TEXTO TYPED________________________
+    if (typeof Typed !== "undefined" && $("#texto-dinamico").length > 0) {
+
+        var typed = new Typed("#texto-dinamico", {
+            strings: [
+                "nos unen",
+                "merecen cada kilómetro",
+                "no se cuentan, se viven",
+                "no entienden límites",
+                "se viven sobre dos ruedas"
+
+            ],
+            typeSpeed: 60,
+            backSpeed: 35,
+            backDelay: 1500,
+            loop: true
+        });
+
+    }
+
+
+
+// ANIMACIÓN PARALLAX________________________
+    if (typeof simpleParallax !== "undefined" && $(".imagen-parallax").length > 0) {
+        var imagenesParallax = document.querySelectorAll(".imagen-parallax");
+
+        new simpleParallax(imagenesParallax, {
+            orientation: "up",
+            scale: 1.3,
+            delay: 0.4,
+            transition: "cubic-bezier(0,0,0,1)"
+        });
+    }
+
+
+
+    
 });
