@@ -424,4 +424,24 @@ $(document).ready(function() {
 
 
 
+// ANIMACIÓN TEXTO TYPED________________________
+    if (typeof Typed !== "undefined" && $("#texto-dinamico").length > 0) {
+
+        var typed = new Typed("#texto-dinamico", {
+            strings: [
+                "nos unen",
+                "merecen cada kilómetro",
+                "no se cuentan, se viven",
+                "no entienden límites",
+                "se viven sobre dos ruedas"
+
+            ],
+            typeSpeed: 60,
+            backSpeed: 35,
+            backDelay: 1500,
+            loop: true
+        });
+
+    }
+
 });
