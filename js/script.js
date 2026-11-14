@@ -137,12 +137,28 @@ $(document).ready(function() {
     $(".guardar-ruta").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
 
+        if ($(this).find("i").hasClass("fa-solid")) {
+            confetti({
+                particleCount: 100,
+                spread: 60,
+                origin: { y: 0.7 },
+                colors: ["#FF0033", "#FFFFFF"],
+            });
+        }        
     });
 
     // Cuando pulso se modifica el corazón de eventos
     $(".guardar-evento").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
 
+        if ($(this).find("i").hasClass("fa-solid")) {
+            confetti({
+                particleCount: 100,
+                spread: 60,
+                origin: { y: 0.7 },
+                colors: ["#FF0033", "#FFFFFF"],
+            });
+        }        
     });
 
 
@@ -404,7 +420,20 @@ $(document).ready(function() {
 
 
 
+// CONFIRMACION DE ASISTENCIA CONFETI________________________
 
+$("#confirmar-evento").on("click", function() {
+
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ["#FF0033", "#FFFFFF"],
+    });
+
+    $("#modal-evento").fadeOut();
+
+});
 
 
 
