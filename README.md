@@ -15,8 +15,11 @@
 - Confetti: Botones finales [OKEY]
 
 # CORREGIR: 
-- AOS: aparecer las tarjetas: 
+- AOS: aparecer las tarjetas: [OKEY]
     · Cuando aplico los filtros, al haber puesto un delay individual a cada tarjeta, la visualización queda fatal. Corregir esto!!!
+
+# PREGUNTAR ADRIÁN: 
+- ¿Por qué mis AOS no funcionan bien con las tarjetas?
 
 # REVISIÓN TOTAL
 CHEQUEAR CON: 
