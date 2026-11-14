@@ -423,7 +423,8 @@ $(document).ready(function() {
 // CONFIRMACION DE ASISTENCIA CONFETI________________________
 
 $("#confirmar-evento").on("click", function() {
-
+    console.log("funciona");
+    
     confetti({
         particleCount: 200,
         spread: 90,
@@ -437,6 +438,21 @@ $("#confirmar-evento").on("click", function() {
 
 
 
+$("#confirmar-ruta").on("click", function() {
+    console.log("funciona");
+    
+    confetti({
+        particleCount: 200,
+        spread: 90,
+        origin: { y: 0.6 },
+        colors: ["#FF0033", "#FFFFFF"],
+    });
+
+    $("#modal-ruta").fadeOut();
+
+});
+
+
 
 
 
@@ -448,7 +464,7 @@ $("#confirmar-evento").on("click", function() {
 // ANIMACIONES AOS________________________
     AOS.init({
         duration: 600,
-        offset: 5
+        offset: 0.1
     });
 
 
