@@ -444,4 +444,21 @@ $(document).ready(function() {
 
     }
 
+
+
+// ANIMACIÓN PARALLAX________________________
+    if (typeof simpleParallax !== "undefined" && $(".imagen-parallax").length > 0) {
+        var imagenesParallax = document.querySelectorAll(".imagen-parallax");
+
+        new simpleParallax(imagenesParallax, {
+            orientation: "up",
+            scale: 1.3,
+            delay: 0.4,
+            transition: "cubic-bezier(0,0,0,1)"
+        });
+    }
+
+
+
+    
 });
