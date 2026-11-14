@@ -13,8 +13,11 @@
         <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">        
+        <!-- CSS AOS: -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- CSS MIO: -->
+        <link rel="stylesheet" href="css/style.css">           
     </head>
 
 
@@ -79,7 +82,7 @@
 
             <!-- BUSCADOR DE RUTAS -->
             <section class="buscador-rutas">
-                <form class="formulario-busqueda">
+                <form class="formulario-busqueda" id="formulario-rutas">
 
                     <!-- ZONA -->
                     <div class="campo-busqueda">
@@ -100,7 +103,7 @@
                         <div class="contenedor-select">
                             <select id="ritmo" name="ritmo">
                                 <option value="">Todos los niveles</option>
-                                <option value="tranquilo">Tranquilo</option>
+                                <option value="bajo">Bajo</option>
                                 <option value="medio">Medio</option>
                                 <option value="avanzado">Avanzado</option>                                
                             </select>
@@ -118,7 +121,6 @@
                                 <option value="">Todas</option>
                                 <option value="curvas">Carreteras con curvas</option>
                                 <option value="autovia">Autovía</option>
-                                <option value="montana">Carreteras de montaña</option>
                             </select>
                             
                             <!-- <span class="flecha-select">⌄</span> -->
@@ -140,21 +142,21 @@
                 <h2>FILTROS RÁPIDOS</h2>
 
                 <div class="lista-filtros">
-                    <button type="button" class="filtro activo">Todas</button>
+                    <button type="button" class="filtro activo" data-filtro="todas">Todas</button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="cerca">
                         Cerca de mí
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="fin-semana">
                         Este fin de semana
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="medio">
                         Nivel medio
                     </button>
 
-                    <button type="button" class="filtro">
+                    <button type="button" class="filtro" data-filtro="curvas">
                         Carreteras con curvas
                     </button>
                 </div>
@@ -164,7 +166,7 @@
             <!-- RESULTADOS -->
             <section class="resultados-rutas">
                 <div class="cabecera-resultados">
-                    <h3>24 RUTAS ENCONTRADAS</h3>
+                    <h3 id="contador-rutas">9 RUTAS ENCONTRADAS</h3>
                 </div>
 
 
@@ -172,7 +174,8 @@
                 <div class="rejilla-rutas">
 
                     <!-- RUTA 1 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta"  data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si" 
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="0">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -222,7 +225,8 @@
 
 
                     <!-- RUTA 2 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="no" data-fin-semana="no" data-curvas="no"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="150">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -271,7 +275,8 @@
 
 
                     <!-- RUTA 3 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta"  data-zona="si" data-nivel="avanzado" data-cerca="si" data-fin-semana="no" data-curvas="no"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="300">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -320,7 +325,8 @@
 
 
                     <!-- RUTA 4 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="no"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="450">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -369,7 +375,8 @@
 
 
                     <!-- RUTA 5 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="tranquilo" data-cerca="no" data-fin-semana="no" data-curvas="si"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="600">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -419,7 +426,8 @@
 
 
                    <!-- RUTA 6 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="bajo" data-cerca="si" data-fin-semana="no" data-curvas="no"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="750">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -449,7 +457,7 @@
 
                                 <div>
                                     <span>RITMO</span>
-                                    <p>Medio</p>
+                                    <p>Bajo</p>
                                 </div>
                             </div>
 
@@ -468,7 +476,8 @@
 
 
                    <!-- RUTA 7 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="medio" data-cerca="si" data-fin-semana="si" data-curvas="si" 
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="900">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -517,7 +526,8 @@
 
 
                    <!-- RUTA 8 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1050">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -566,7 +576,8 @@
 
                     
                    <!-- RUTA 9 -->
-                    <article class="tarjeta-ruta">
+                    <article class="tarjeta-ruta" data-zona="si" data-nivel="avanzado" data-cerca="no" data-fin-semana="no" data-curvas="si"
+                    data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-delay="1200">
 
                         <!-- IMAGEN Y FECHA -->
                         <div class="img-ruta">
@@ -642,7 +653,31 @@
             </div>
         </footer>
 
+
+ 
+        <!-- BOTÓN VOLVER ARRIBA -->
+        <button type="button" id="volver-arriba" class="boton-subir" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>       
+
+
+
+
+
+<!-- JS___________________________ -->
+ 
+       
+    <!-- Cargamos la librería jQuery ANTES de nuestro archivo de JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Enlazo js -->
+    <script src="js/script.js"></script>
+
         
+
     </body>
 </html>
 

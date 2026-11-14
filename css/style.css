@@ -233,23 +233,26 @@ button {
 /* _______________ INICIO _____________________ */
 
 /* HERO PRINCIPAL */
-.hero {
+    .hero {
         position: relative;
         width: 100%;
-        min-height: 680px;
+        height: calc(100svh - 90px);
+        min-height: 580px;
         display: flex;
         align-items: center;
         overflow: hidden;
     }
 
     /* IMAGEN DEL HERO */
-    .imagen-hero {
+    .slide {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        display: block;
         object-fit: cover;
+        object-position: center;
     }
 
     /* CAPA OSCURA */
@@ -540,8 +543,14 @@ button {
     border-color: var(--rojo);
 }
 
+/* CAMBIO DEL ESTADO DEL CORAZÓN */
+.guardar-ruta i {
+    transition: color 0.2s ease;
+}
 
-
+.guardar-ruta i.fa-solid {
+    color: #FF0000;
+}
 
 
 /* _______________ EVENTOS _____________________ */
@@ -735,6 +744,14 @@ button {
 }
 
 
+/* CAMBIO DE ESTADO DEL CORAZÓN */
+.guardar-evento i {
+    transition: color 0.2s ease;
+}
+
+.guardar-evento i.fa-solid {
+    color: #FF0000;
+}
 
 /* _______________ UNIFICACIÓN DE CSS BUSCADORES DE RUTAS Y EVENTOS _____________________ */
 
@@ -1252,29 +1269,34 @@ button {
 
 
 /* VENTANA MODAL */
-.modal-aviso {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.80);
-}
+    .modal-aviso {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85);
+        z-index: 1000;
+    }
 
-.contenido-modal {
-    position: relative;
-    width: 100%;
-    max-width: 480px;
-    padding: 36px;
-    background-color: var(--carbon);
-    border: 1px solid var(--grisoscuro);
-    border-radius: 10px;
-}
+    .contenido-modal {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 50%;
+        max-width: 550px;
+        min-width: 300px;
+
+        max-height: 90%;
+        overflow-y: auto;
+
+        background-color: #0F0F0F;
+        border: 1px solid #292929;
+        padding: 40px;
+    }
 
 /* CERRAR MODAL */
 .cerrar-modal {
@@ -1462,6 +1484,55 @@ button {
 
 
 
+/* MENÚ HAMBURGUESA De 3 líneas a una X (Adrián) */
+    .boton-menu span {
+        transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+    .boton-menu.abierto span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .boton-menu.abierto span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .boton-menu.abierto span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+
+
+
+/*_______________ BOTÓN VOLVER ARRIBA__________ */
+    .boton-subir {
+        display: none;
+        position: fixed;
+        right: 30px;
+        bottom: 30px;
+        z-index: 999;
+
+        width: 52px;
+        height: 52px;
+
+        align-items: center;
+        justify-content: center;
+
+        background-color: var(--rojo);
+        color: var(--blanco);
+        border: none;
+        border-radius: 50%;
+
+        font-size: 18px;
+
+        transition: background-color 0.2s ease;
+    }
+
+    /* HOVER */
+    .boton-subir:hover {
+        background-color: var(--rojo-oscuro);
+}
+
+
 
 
 
@@ -1583,6 +1654,40 @@ button {
         border-radius: 2px;
     }
 
+
+    /* MENÚ DESPLEGABLE */
+    .cabecera {
+        position: relative;
+        z-index: 100;
+    }
+
+    .contenedor-cabecera {
+        position: relative;
+    }
+
+    .navegacion {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 25px 30px;
+        background-color: var(--negro);
+        border-bottom: 1px solid #292929;
+    }
+
+    .lista-navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .lista-navegacion a {
+        font-size: 15px;
+    }
+
+
+
     /* OCULTAR NAVEGACIÓN Y ACCIONES */
     .navegacion {
         display: none;
@@ -1698,7 +1803,8 @@ button {
 
     /* INICIO */
     .hero {
-        min-height: 580px;
+        height: calc(100svh - 72px);
+        min-height: 500px;
     }
 
     .contenido-hero {
@@ -1930,6 +2036,15 @@ button {
         font-size: 14px;
     }
 
+
+    /* ventana modal */
+    .contenido-modal {
+        width: 90%;
+        min-width: 0;
+        padding: 30px 22px;
+    }
+
+
     /* FOOTER */
     .contenido-footer {
         flex-direction: column;
@@ -1952,4 +2067,14 @@ button {
         text-align: left;
         line-height: 1.6;
     }
+
+    /* BOTÓN VOLVER ARRUBA */
+    .boton-subir {
+        right: 20px;
+        bottom: 20px;
+        width: 46px;
+        height: 46px;
+    }
+
+
 }

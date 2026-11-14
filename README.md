@@ -34,3 +34,44 @@ Ej js: modificamos todas las animaciones a la vez en js:
         AOS.init({
         duration: 2000
         }); 
+
+
+
+
+<!-- Otra librería -->
+https://mattboldt.github.io/typed.js/
+
+
+<!-- OTRA -->
+         <!-- SIMPLEPARADAX -->
+        <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@7.0.0/dist/vanilla/simpleParallaxVanilla.umd.min.js"></script>
+
+
+
+
+
+
+
+
+# FALTA POR HACER: 
+- Meter un slideshow en el index [OKEY]
+- JS: Ventana modal [OKEY]
+- JS: Tarjetas favoritos [OKEY]
+- JS: Filtros de búsqueda [OKEY]
+- JS: Formularios [OKEY]
+
+
+- AOS: aparecer las tarjetas 
+- Typed: titular del index 
+- SimplePArrallax: Fotos eventos y detalles
+- Confetti: Botones finales
+
+
+REVISIÓN TOTAL
+CHEQUEAR CON: 
+https://jigsaw.w3.org/css-validator/ (PDF de entrega- evaluación)
+https://validator.w3.org/ (PDF de entrega- evaluación)
+
+
+# LIBRERÍAS
+https://confettijs.org/

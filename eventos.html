@@ -13,8 +13,11 @@
         <!-- FONT AWESOME -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
         
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css">           
+        <!-- CSS AOS: -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <!-- CSS MIO: -->
+        <link rel="stylesheet" href="css/style.css">               
     </head>
 
 
@@ -68,7 +71,7 @@
             <!-- BUSCADOR DE EVENTOS -->
             <section class="buscador-eventos">
 
-                <form class="formulario-eventos">
+                <form class="formulario-eventos" id="formulario-eventos">
 
                     <!-- ZONA -->
                     <div class="campo-busqueda">
@@ -105,7 +108,7 @@
                             <select id="tipo-carretera" name="tipo-carretera">
                                 <option value="">Todas</option>
                                 <option value="concentracion">Concentración</option>
-                                <option value="encuentro social">Encuentro social</option>
+                                <option value="sociales">Encuentro social</option>
                                 <option value="planes">Planes</option>
                             </select>
                         </div>
@@ -126,23 +129,23 @@
                   <h2>FILTROS RÁPIDOS</h2>
 
                     <div class="lista-filtros">
-                        <button type="button" class="filtro activo">
+                        <button type="button" class="filtro activo" data-filtro="todas">
                             Todas
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="cerca">
                             Cerca de mí
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="fin-semana">
                             Este fin de semana
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="concentraciones">
                             Concentraciones
                         </button>
 
-                        <button type="button" class="filtro">
+                        <button type="button" class="filtro" data-filtro="sociales">
                             Encuentros sociales
                         </button>
                     </div>
@@ -152,14 +155,14 @@
             <!-- RESULTADOS -->
             <section class="resultados-eventos">
                 <div class="cabecera-resultados">
-                    <h3>20 EVENTOS ENCONTRADOS</h3>
+                    <h3 id="contador-eventos">6 EVENTOS ENCONTRADOS</h3>
                 </div>
 
                 <!-- TARJETAS DE EVENTOS -->
                 <div class="rejilla-eventos">
 
                     <!-- EVENTO 1 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="si" data-fin-semana="no" data-horario="mañana" data-categoria="sociales">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento7.webp" alt="Evento 1">
@@ -200,7 +203,7 @@
 
 
                     <!-- EVENTO 2 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="no" data-fin-semana="no" data-horario="tarde" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento1.webp" alt="Evento 2">
@@ -239,7 +242,7 @@
 
 
                    <!-- EVENTO 3 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="si" data-fin-semana="si" data-horario="noche" data-categoria="sociales">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento3.webp" alt="Evento 3">
@@ -278,7 +281,7 @@
 
 
                    <!-- EVENTO 4 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="no" data-fin-semana="no" data-horario="mañana" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento4.webp" alt="Evento 3">
@@ -318,7 +321,7 @@
 
 
                    <!-- EVENTO 5 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="si" data-fin-semana="si" data-horario="mañana" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento5.webp" alt="Evento 3">
@@ -359,7 +362,7 @@
 
 
                    <!-- EVENTO 6 -->
-                    <article class="tarjeta-evento">
+                    <article class="tarjeta-evento" data-zona="si" data-cerca="si" data-fin-semana="si" data-horario="mañana" data-categoria="concentraciones">
                         <!-- IMAGEN Y FEHCA -->
                         <div class="img-evento">
                             <img src="media/img/eventos/evento6.webp" alt="Evento 3">
@@ -424,7 +427,31 @@
                 </p>
             </div>
         </footer>
+ 
         
+
+
+        <!-- BOTÓN VOLVER ARRIBA -->
+        <button type="button" id="volver-arriba" class="boton-subir" aria-label="Volver arriba">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+
+        
+
+<!-- JS___________________________ -->
+ 
+       
+    <!-- Cargamos la librería jQuery ANTES de nuestro archivo de JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Enlazo js -->
+    <script src="js/script.js"></script>
+
+        
+
     </body>
 </html>
 
