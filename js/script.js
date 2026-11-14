@@ -136,29 +136,13 @@ $(document).ready(function() {
     // Cuando pulso se modifica el corazón de rutas
     $(".guardar-ruta").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
-
-        if ($(this).find("i").hasClass("fa-solid")) {
-            confetti({
-                particleCount: 100,
-                spread: 60,
-                origin: { y: 0.7 },
-                colors: ["#FF0033", "#FFFFFF"],
-            });
-        }        
+     
     });
 
     // Cuando pulso se modifica el corazón de eventos
     $(".guardar-evento").on("click", function() {
         $(this).find("i").toggleClass("fa-regular fa-solid");
-
-        if ($(this).find("i").hasClass("fa-solid")) {
-            confetti({
-                particleCount: 100,
-                spread: 60,
-                origin: { y: 0.7 },
-                colors: ["#FF0033", "#FFFFFF"],
-            });
-        }        
+      
     });
 
 
@@ -464,7 +448,7 @@ $("#confirmar-ruta").on("click", function() {
 // ANIMACIONES AOS________________________
     AOS.init({
         duration: 600,
-        offset: 0.1
+        offset: 50,
     });
 
 
