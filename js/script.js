@@ -369,7 +369,59 @@ $(document).ready(function() {
 
 
 
+// SLIDESHOW________________________
+// Seleccionamos las imágenes
+    var slides = $(".slide");
+    var total = slides.length;
+    var actual = 0;
 
-    
+    // Escondemos todas las imágenes menos la primera
+    slides.hide();
+    slides.eq(0).show();
+
+    // Función para mostrar las imágenes
+    function mostrar(indiceSlides) {
+        slides.eq(actual).fadeOut(1000);
+
+        actual = indiceSlides;
+
+        slides.eq(actual).fadeIn(1000);
+    }
+
+    // Función para pasar a la siguiente imagen
+    function siguiente() {
+        var n = actual + 1;
+
+        if (n === total) {
+            n = 0;
+        }
+        mostrar(n);
+    }
+    // Funcionamiento automático
+    var automatico = setInterval(siguiente, 4000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ANIMACIONES AOS________________________
+    AOS.init({
+        duration: 600,
+        offset: 50
+    });
+
+
 
 });
