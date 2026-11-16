@@ -461,7 +461,7 @@ $("#confirmar-ruta").on("click", function() {
                 "nos unen",
                 "merecen cada kilómetro",
                 "no se cuentan, se viven",
-                "no entienden límites",
+                "no entienden de límites",
                 "se viven sobre dos ruedas"
 
             ],
