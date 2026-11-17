@@ -23,16 +23,16 @@
 
 
 # LIBRERÍAS
-- ANIMACIÓN DE CONFETTI (Confeti):
+- ANIMACIÓN DE CONFETTI (Confeti): [OKEY]
     https://confettijs.org/
 
-- ANIMACIONES AOS (Aparición de elementos):
+- ANIMACIONES AOS (Aparición de elementos): [OKEY]
     https://michalsnik.github.io/aos/
 
-- ANIMACIONES SIMPLEPARALLAX (Imágenes)
+- ANIMACIONES SIMPLEPARALLAX (Imágenes): [OKEY]
     https://simpleparallax.com/
 
-- ANIMACIONES TYPED (Borrar texto y reescribir)
+- ANIMACIONES TYPED (Borrar texto y reescribir): [OKEY]
 
 
 
